@@ -1,0 +1,24 @@
+.Important {
+    //dimension
+    padding: 10px;
+    //decoration
+    border-bottom: solid 1px black;
+    background: $BgColor_WGPGreen_SemiFade;
+    //font
+    text-align: center;
+    font-family: $FontStack_Links;
+    font-size: $FontSize_m;
+}
+
+h1.Important {
+    //dimension
+    margin-bottom: 0;
+    margin-top: 0em;
+    //decoration
+    border-top: solid 1px black;
+    background: $BgColor_Grey_Fade;
+    //font
+    font-weight: 500;
+    font-family: $FontStack_Headings;
+    font-size: $FontSize_l + .3em;
+}

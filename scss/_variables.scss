@@ -1,0 +1,35 @@
+$BgColor_LBlue_Fade: rgba(228, 234, 255, 0.48);
+$BgColor_Grey_Fade: rgba(209, 209, 209, 0.7);
+$BgColor_Yellow_Fade: rgba(255, 242, 86, 0.54);
+$BgColor_DGrey_Solid: #363740;
+$BgColor_DGrey_Fade: rgba(249, 249, 249, 0.14);
+$BgColor_DGrey_Border: #45464f;
+$BgColor_WGPGreen_Solid: #8ba82e;
+$BgColor_WGPGreen_SemiFade: rgba(139, 168, 46, 0.81);
+$BgColor_WGPBlue_Solid: #8491c3;
+$BgColor_Red_Solid: #ce3939;
+$FontSize_xs: .7em;
+$FontSize_s: 1em;
+$FontSize_m: 1.2em;
+$FontSize_l: 1.8em;
+$FontSize_xl: 2.2em;
+$FontSize_xxl: 2.6em;
+$FontStack_Titles: 'Century Gothic', sans-serif;
+$FontStack_Links: 'Lato', sans-serif;
+$FontStack_Text: 'Tahoma', sans-serif;
+$FontStack_Headings: 'Roboto', sans-serif;
+$FontColor_Links: #4b8ddb;
+$FontColor_Links_Light: lighten(#4b8ddb, 6%);
+$FontColor_Navigation: #3a519b;
+
+@mixin bp($point) {
+    $laptop: "screen and (min-width: 1366px) and (max-width: 768px)";
+    $desktop: "screen and (min-width: 1366) and (max-width: 1920)";
+
+    @if $point == laptop {
+        @media #{$laptop} {@content;}
+    }
+    @if $point == desktop {
+        @media #{$desktop} {@content;}
+    }
+}

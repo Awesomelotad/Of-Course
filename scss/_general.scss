@@ -1,0 +1,164 @@
+html {
+    //dimension
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    //decoration
+    background: $BgColor_DGrey_Solid url("../media/bg.jpg") repeat scroll;
+}
+body {
+    //dimension
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    min-height: 100%;
+}
+
+a {
+    //font
+    text-decoration: none;
+    color: $FontColor_Links;
+}
+
+.PageLoader {
+    //dimension
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    //layout
+    display: none;
+    visibility: hidden;
+}
+%ButtonClass {
+    &.green {
+        //layout
+        display: inline;
+        //dimension
+        min-height: 44px;
+        min-width: 44px;
+        margin: 0 5px;
+        //decoration
+        background: #49b94d url('../media/tick.png') no-repeat center;
+        background-size: 33px 32px!important;
+        border: 1px solid darken(#49b94d, 10%);
+        border-radius: 7px;
+        //font
+        font-size: $FontSize_m;
+        font-weight: bold;
+        font-family: $FontStack_Links;
+        &:hover {
+            //decoration
+            background: darken(#49b94d, 4%) url('../media/tick.png') no-repeat center;
+            border-color: darken(#49b94d, 15%);
+            cursor: pointer;
+        }
+    }
+    &.red {
+        //extension
+        @extend .green;
+        //decoration
+        background: lighten($BgColor_Red_Solid, 8%) url('../media/delete.png') no-repeat center;
+        border-color: darken($BgColor_Red_Solid, 18%);
+        &:hover {
+            //decoration
+            background: lighten($BgColor_Red_Solid, 4%) url('../media/delete.png') no-repeat center;
+            border-color: darken($BgColor_Red_Solid, 23%);
+        }
+    }
+    &.blue {
+        //extension
+        @extend .green;
+        //decoration
+        background: $FontColor_Links url('../media/edit.png') no-repeat center;
+        border-color: $FontColor_Navigation;
+        &:hover {
+            //decoration
+            background: darken($FontColor_Links, 4%) url('../media/edit.png') no-repeat center;
+            border-color: darken($FontColor_Navigation, 5%);
+        }
+    }
+    &:focus {
+        //decoration
+        outline: 0;
+    }
+}
+
+table.top_pattern {
+    //dimension
+    width: 100%;
+    border-collapse: collapse;
+    & tbody tr td {
+        //layout
+        display: table-cell;
+        //dimension
+        width: 14%;
+        height: 5px;
+        padding: 0;
+        &.tc_1 {
+            //decoration
+            background: #7c8bc5;
+        }
+        &.tc_2 {
+            //decoration
+            background: #799c0c;
+        }
+        &.tc_3 {
+            //decoration
+            background: #2e4795;
+        }
+    }
+}
+.radio {
+    margin: 0.5rem;
+    label {
+        font-size: $FontSize_m;
+    }
+    input[type="radio"] {
+        position: relative;
+        opacity: 0;
+        +.radio-label {
+            &:before {
+                content: '';
+                background: white;
+                border-radius: 100%;
+                border: 1px solid darken($BgColor_WGPBlue_Solid, 25%);
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                position: relative;
+                margin-right: .8em; 
+                vertical-align: top;
+                cursor: pointer;
+                text-align: center;
+                transition: all 250ms ease;
+            }
+        }
+        &:checked {
+            +.radio-label {
+                &:before {
+                    background-color: $FontColor_Links;
+                    box-shadow: inset 0 0 0 4px white;
+                    font-size: $FontSize_m;
+                }
+            }
+        }
+        &:focus {
+            +.radio-label {
+                &:before {
+                    outline: none;
+                    border-color: $FontColor_Links;
+                }
+            }
+        }
+        +.radio-label {
+            &:empty {
+                &:before {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

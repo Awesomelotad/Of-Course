@@ -1,0 +1,160 @@
+.StaticForm {
+    //dimension
+    width: calc(100% - 32px);
+    padding: 2em 1em 1em 1em;
+    min-height: 70px;
+    //decoration
+    background: darken($BgColor_DGrey_Solid, 3%);
+    border: 1px solid $BgColor_DGrey_Border;
+    //font
+    font-family: $FontStack_Titles;
+    ul {
+        //dimension
+        padding: 0;
+        margin: 0;   
+        //decoration
+        list-style: none;
+    }
+    .FormField {
+        //layout
+        display: block;
+        //dimension
+        padding: 9px;
+        //decoration
+        border: 1px solid $BgColor_DGrey_Border;
+        margin-bottom: 30px;
+        &:last-child {
+            //dimension
+            margin-bottom: 0px;
+            //decoration
+            border: none;
+            //font
+            text-align: center;
+        }
+        & > label:first-child {
+            //layout
+            display: block;
+            //dimenesion
+            margin-top: -28px;
+            padding: 5px;
+            overflow: hidden;
+            width: fit-content;
+            width: -ms-fit-content;
+            //decoration
+            background: darken($BgColor_DGrey_Solid, 3%);
+            //font
+            color: $FontColor_Links;
+            font-size: $FontSize_l - .4em;
+            font-family: $FontStack_Links;
+        }
+        & input::placeholder {
+            //decoration
+            background: darken($BgColor_DGrey_Solid, 3%);
+            border: none;
+            //font
+            font-family: $FontStack_Headings;
+            font-weight: lighter;
+            color: darken(lightgray, 15%);
+        }
+        &.Split {
+            //layout
+            float: right;
+            display: inline-block;
+            //dimension
+            width: calc(50% - 27px);
+            min-height: 41px;
+            button {
+                //dimension
+                min-height: 41px;
+                //decoration
+                background-color: $FontColor_Links;
+                cursor: pointer;
+                &:hover {
+                    //decoration
+                    background-color: darken($FontColor_Links, 5%);
+                }
+            }
+            &:nth-child(odd) {
+                //layout
+                float: left;
+            }
+        }
+        &.Full {
+            width: calc(100% - 18px);
+            display: inline-block;
+            float: left;
+        }
+        &.Red {
+            border: none;
+            padding-top: 0;
+            padding-bottom: 0;
+            button {
+                //dimension
+                min-height: 61px;
+                //decoration
+                background: $BgColor_Red_Solid;
+                border: none;
+                border-bottom: 3px solid darken($BgColor_Red_Solid, 8%);
+                border-radius: 3px;
+                //font
+                color: white;
+                &:hover {
+                    //decoration
+                    background: darken($BgColor_Red_Solid, 4%);
+                    cursor: pointer;
+                    //font
+                    color: darken(white, 5%);
+                }
+            }
+        }
+        &.Blue {
+            //extension
+            @extend .Red;
+            button {
+                //decoration
+                background: lighten($FontColor_Navigation, 5%);
+                border-bottom: 3px solid darken($FontColor_Navigation, 2%);
+                &:hover {
+                    background: $FontColor_Navigation;
+                }
+            }
+        }
+    }
+    input, textarea, button, select {
+        //layout
+        display: block;
+        box-sizing: border-box;
+        //dimension
+        padding: 0;
+        resize: none;
+        width: 100%;
+        margin-left: 5px;
+        //decoration
+        outline: none;
+        border: none;
+        background-color: darken($BgColor_DGrey_Solid, 3%);
+        //font
+        font-size: $FontSize_m + .1em;
+        font-family: $FontStack_Headings;
+        color: white;
+    }
+    .FormSubmit {
+        input, button, select {
+            //dimension
+            padding: 10px;
+            //decoration
+            background: lighten($FontColor_Navigation, 5%);
+            border: none;
+            border-bottom: 3px solid #1b3669;
+            //font
+            color: white;
+            &:hover {
+                //decoration
+                background: $FontColor_Navigation;
+                cursor: pointer;
+                //font
+                color: darken(white, 5%);
+            }
+        }
+    }
+}

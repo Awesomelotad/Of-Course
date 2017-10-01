@@ -1,0 +1,116 @@
+.ModalForm {
+    //dimension
+    padding: 35px 30px 30px 30px;
+    //decoration
+    background: white;
+    border-radius: 10px;
+    //font
+    font-family: $FontStack_Titles;
+    ul {
+        //dimension
+        padding: 0;
+        margin: 0;   
+        //decoration
+        list-style: none;
+    }
+    .FormField {
+        //layout
+        display: block;
+        //dimension
+        padding: 9px;
+        //decoration
+        border: 1px solid #DDDDDD;
+        margin-bottom: 30px;
+        border-radius: 3px;
+        &:last-child{
+            //dimension
+            margin-bottom: 0px;
+            //decoration
+            border: none;
+            //font
+            text-align: center;
+        }
+        & > label {
+            //layout
+            display: block;
+            float: left;
+            //dimenesion
+            margin-top: -23px;
+            padding: 0 4px 10px 1px;
+            overflow: hidden;
+            //decoration
+            background: white;
+            //font
+            color: $FontColor_Navigation;
+            font-size: $FontSize_l - .4em;
+            font-family: $FontStack_Links;
+        }
+        & input::placeholder {
+            //font
+            font-family: $FontStack_Headings;
+            font-weight: lighter;
+            color: darken(lightgray, 15%);
+        }
+    }
+    input, textarea, button {
+        //layout
+        display: block;
+        box-sizing: border-box;
+        //dimension
+        padding: 2px;
+        width: 100%;
+        resize: none;
+        //decoration
+        outline: none;
+        border: none;
+        //font
+        font-size: $FontSize_m + .1em;
+        font-family: $FontStack_Headings;
+    }
+    .FormSubmit {
+        input, button {
+            //dimension
+            padding: 10px;
+            //decoration
+            background: $FontColor_Links;
+            border: none;
+            border-bottom: 3px solid darken($FontColor_Links, 7%);
+            border-radius: 3px;
+            //font
+            color: white;
+            &:hover {
+                //decoration
+                background: darken($FontColor_Links, 4%);
+                cursor: pointer;
+                //font
+                color: darken(white, 5%);
+            }
+        }
+        & .Red {
+            input, button {
+                background: $BgColor_Red_Solid;
+                border-bottom-color: darken($BgColor_Red_Solid, 8%);
+                &:hover {
+                    background: darken($BgColor_Red_Solid, 4%);
+                }
+            }
+        }
+    }
+}
+.FormError {
+    //layout
+    display: none;
+    //dimension
+    padding: 10px 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+    //decoration
+    background: $BgColor_Red_Solid;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    border-radius: 0 0 9px 9px;
+    //font
+    font-family: $FontStack_Headings;
+    font-size: 1.2em;
+    text-align: center;
+}

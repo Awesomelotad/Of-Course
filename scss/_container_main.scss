@@ -1,0 +1,12 @@
+.Container {
+    //dimension
+    padding-bottom: 2.8em;
+    .Content {
+        //dimension
+        margin: 1.7em 3em 0em 3em;
+        padding: 1.5em;
+        //decoration
+        border: 1px solid $BgColor_DGrey_Border;
+        background: $BgColor_DGrey_Solid;
+    }
+}

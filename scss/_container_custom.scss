@@ -1,0 +1,44 @@
+.Selection {
+    .SelectCentered {
+        //dimension
+        margin: 3em 0 2em 0;
+        //font
+        text-align: center;
+        img {
+            //dimension
+            margin-bottom: 1em;
+        }
+        a {
+            //extension
+            @extend %ButtonClass;
+            &.blue {
+                //dimension
+                padding: 20px;
+                //decoration
+                background: $FontColor_Links;
+                //font
+                color: white;
+                font-size: $FontSize_m;
+                font-family: $FontStack_Links;
+                &:hover {
+                    //decoration
+                    background: darken($FontColor_Links, 4%);
+                }
+            }
+        }
+    }
+}
+
+.Requests {
+    .RequestsButton {
+        //extension
+        @extend %ButtonClass;
+    }
+    .Help {
+        //layout
+        @include bp(desktop) {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}

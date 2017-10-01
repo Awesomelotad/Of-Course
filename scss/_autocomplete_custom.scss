@@ -1,0 +1,75 @@
+.easy-autocomplete-container {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.easy-autocomplete-container ul {
+    position: relative;
+    top: -1px;
+    display: none;
+    margin-top: 0;
+    padding-bottom: 0;
+    border-top: 1px dotted #ccc;
+    background: darken($BgColor_DGrey_Solid, 3%);
+}
+
+.easy-autocomplete-container ul li,
+.easy-autocomplete-container ul .eac-category {
+    display: block;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #ccc;
+    border-image: none;
+    background: inherit;
+    font-weight: normal;
+    font-size: 14px;
+    padding-left: 8px;
+}
+
+.easy-autocomplete-container ul li:last-child {
+    border-width: 0 1px 1px;
+    border-radius: 0 0 2px 2px;
+}
+
+.easy-autocomplete-container ul li.selected {
+    background: darken($BgColor_DGrey_Solid, 3%);
+    cursor: pointer;
+}
+
+.easy-autocomplete-container ul li.selected div {
+    font-weight: normal;
+}
+
+.easy-autocomplete-container ul li div {
+    display: block;
+    word-break: break-all;
+    font-weight: normal;
+}
+
+.easy-autocomplete-container ul li b {
+    font-weight: bold;
+}
+
+.easy-autocomplete-container ul .eac-category {
+    font-style: italic;
+    color: white;
+}
+
+.easy-autocomplete {
+    position: relative;
+}
+
+.easy-autocomplete input {
+    float: none;
+}
+
+.easy-autocomplete input:hover,
+.easy-autocomplete input:focus {
+    box-shadow: none;
+}
+
+.easy-autocomplete a {
+    display: block;
+}

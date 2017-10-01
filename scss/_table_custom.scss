@@ -1,0 +1,58 @@
+#CustomTable {
+    th {
+        //font
+        font-weight: lighter!important;
+        text-align: left!important;
+    }
+    a {
+        //font
+        text-decoration: none;
+        &:hover {
+            //font
+            color: darken(blue, 15%);
+            text-decoration: underline;
+        }
+    }
+    tr td {
+        //dimension
+        max-height: 50px;
+        &:first-child {
+            padding-left: 25px!important;
+        }
+    }
+    //font
+    font-size: $FontSize_m + .2em;
+    &_wrapper {
+        //dimension
+        margin-top: 1.2em;
+    }
+}
+
+#DatesTable_wrapper table {
+    //extension
+    @extend #CustomTable;
+    tr td:last-child {
+        min-width: 110px!important;
+    }
+}
+
+#ContactTable {
+    //extension
+    @extend #CustomTable;
+}
+
+#YearTable {
+    //extension
+    @extend #CustomTable;
+    &_wrapper {
+        .dataTables_filter {
+            //dimension
+            margin-right: 16px;
+        }
+    }
+}
+
+#RequestsTable {
+    //extension
+    @extend #CustomTable;
+}

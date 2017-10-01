@@ -1,0 +1,20 @@
+p {
+    //font
+    font-family: $FontStack_Text;
+    font-size: $FontSize_m + .1em;
+    color: white;
+    line-height: 1.3em;
+}
+
+ul {
+    //extension
+    @extend p;
+    margin: 1em 0;
+}
+
+h2 {
+    //font
+    color: white;
+    font-family: $FontStack_Headings;
+    font-size: $FontSize_m + .2em;
+}
