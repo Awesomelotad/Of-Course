@@ -1,3 +1,5 @@
+// main: complete.scss\
+
 .Selection {
     .SelectCentered {
         //dimension
@@ -15,14 +17,14 @@
                 //dimension
                 padding: 20px;
                 //decoration
-                background: $FontColor_Links;
+                background: $fontcolor-links;
                 //font
                 color: white;
-                font-size: $FontSize_m;
-                font-family: $FontStack_Links;
+                font-size: $fontsize-m;
+                font-family: $fontstack-lato;
                 &:hover {
                     //decoration
-                    background: darken($FontColor_Links, 4%);
+                    background: darken($fontcolor-links, 4%);
                 }
             }
         }

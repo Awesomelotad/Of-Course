@@ -1,3 +1,5 @@
+// main: complete.scss
+
 .Header {
     //layout
     display: flex;
@@ -23,8 +25,8 @@
         //layout
         display: inline-flex;
         //font
-        font-family: $FontStack_Titles;
-        font-size: $FontSize_l + .1em;
+        font-family: $fontstack-roboto;
+        font-size: $fontsize-l + .1em;
         font-weight: 500;
     }
     .LoginButtonContainer {
@@ -37,22 +39,22 @@
             //dimension
             padding: .6em 2.4em .6em .6em;
             //decoration
-            background: $BgColor_DGrey_Solid url('../media/enter.png') no-repeat;
+            background: $bg-dgrey-solid url('../media/enter.png') no-repeat;
             background-position: right .4em center;
             background-size: 30px 30px;
-            border: 1px solid $BgColor_WGPBlue_Solid;
+            border: 1px solid $bg-wgpblue-solid;
             //font
             text-decoration: none;
-            font-family: $FontStack_Links;
-            font-size: $FontSize_m - .1em;
-            color: $FontColor_Links;
+            font-family: $fontstack-lato;
+            font-size: $fontsize-m - .1em;
+            color: $fontcolor-links;
         }:hover {
             //decoration
-            background: lighten($BgColor_DGrey_Solid, 4%) url('../media/enter_green.png') no-repeat;
+            background: lighten($bg-dgrey-solid, 4%) url('../media/enter_green.png') no-repeat;
             background-position: right .4em center;
             background-size: 30px 30px;
             //font
-            color: $FontColor_Links_Light;
+            color: lighten($fontcolor-links, 6%);
         }
         .LogoutButton {
             //extension
@@ -60,12 +62,12 @@
             //dimension
             padding: .6em;
             //decoration
-            background: $BgColor_DGrey_Solid;
+            background: $bg-dgrey-solid;
             &:hover {
                 //decoration
-                background: $BgColor_DGrey_Solid;
+                background: $bg-dgrey-solid;
                 //font
-                color: $FontColor_Links;
+                color: $fontcolor-links;
             }
         }
         .LogoutLink {
@@ -75,10 +77,10 @@
             padding: .6em 1em .6em 1.3em;
             //decoration
             border-left: none;
-            background: $BgColor_DGrey_Solid url('../media/exit.png') no-repeat center;
+            background: $bg-dgrey-solid url('../media/exit.png') no-repeat center;
             background-size: 30px 30px;
             &:hover {
-                background: lighten($BgColor_DGrey_Solid, 4%) url('../media/exit_red.png') no-repeat center;
+                background: lighten($bg-dgrey-solid, 4%) url('../media/exit_red.png') no-repeat center;
             }
         }
     }

@@ -1,3 +1,5 @@
+// main: complete.scss
+
 table.dataTable {
     //dimension
     margin-right: 0px!important;
@@ -5,7 +7,7 @@ table.dataTable {
     color: black;
     tr {
         //font
-        font-family: $FontStack_Headings;
+        font-family: $fontstack-tahoma;
         &:first-child {
             //decoration
             border-top: none;
@@ -16,10 +18,10 @@ table.dataTable {
         }
         &.optional {
             //decoration
-            background-color: lighten($BgColor_WGPGreen_Solid, 10%)!important;
+            background-color: lighten($bg-wgpgreen-solid, 10%)!important;
             &:hover {
                 //decoration
-                background-color: lighten($BgColor_WGPGreen_Solid, 15%)!important;
+                background-color: lighten($bg-wgpgreen-solid, 15%)!important;
             }
         }
         &.required {
@@ -33,15 +35,15 @@ table.dataTable {
     }
     th {
         //font
-        font-family: $FontStack_Links;
-        font-size: $FontSize_m + .1em;
+        font-family: $fontstack-lato;
+        font-size: $fontsize-m + .1em;
         &:nth-child(odd) {
             //decoration
-            background-color: darken($BgColor_WGPBlue_Solid, 3%);
+            background-color: darken($bg-wgpblue-solid, 3%);
         }
         &:nth-child(even) {
             //decoration
-            background-color: $BgColor_WGPBlue_Solid;
+            background-color: $bg-wgpblue-solid;
         }
     }
     td {
@@ -58,7 +60,7 @@ table.dataTable {
         //layout
         display: inline-flex!important;
         flex-direction: row;
-        
+
     }
     .DatesButton {
         //extension
@@ -102,12 +104,12 @@ th.dt-center, td.dt-center {
     outline: none;
     //font
     font-weight: bold;
-    font-family: $FontStack_Headings;
-    font-size: $FontSize_s;
+    font-family: $fontstack-lato;
+    font-size: $fontsize-s;
     color: black!important;
     & span {
         //font
-        font-size: $FontSize_m;
+        font-size: $fontsize-m;
     }
     &:hover {
         //decoration
@@ -124,16 +126,16 @@ th.dt-center, td.dt-center {
 .dtr-title {
     //font
     color: black;
-    font-family: $FontStack_Headings;
+    font-family: $fontstack-roboto;
     font-weight: 500!important;
-    font-size: $FontSize_s;
+    font-size: $fontsize-s;
 }
 .dtr-data {
     //dimension
     margin-left: 20px;
     //fonts
     color: black;
-    font-family: $FontStack_Text;
-    font-size: $FontSize_s - .1em;
+    font-family: $fontstack-tahoma;
+    font-size: $fontsize-s - .1em;
     line-height: normal;
 }

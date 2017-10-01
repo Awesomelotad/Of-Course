@@ -1,3 +1,5 @@
+// main: complete.scss
+
 .easy-autocomplete-container {
     position: absolute;
     left: 0;
@@ -12,7 +14,7 @@
     margin-top: 0;
     padding-bottom: 0;
     border-top: 1px dotted #ccc;
-    background: darken($BgColor_DGrey_Solid, 3%);
+    background: darken($bg-dgrey-solid, 3%);
 }
 
 .easy-autocomplete-container ul li,
@@ -34,7 +36,7 @@
 }
 
 .easy-autocomplete-container ul li.selected {
-    background: darken($BgColor_DGrey_Solid, 3%);
+    background: darken($bg-dgrey-solid, 3%);
     cursor: pointer;
 }
 

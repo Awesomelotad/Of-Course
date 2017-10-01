@@ -1,7 +1,9 @@
+// main: complete.scss
+
 p {
     //font
-    font-family: $FontStack_Text;
-    font-size: $FontSize_m + .1em;
+    font-family: $fontstack-tahoma;
+    font-size: $fontsize-m + .1em;
     color: white;
     line-height: 1.3em;
 }
@@ -15,6 +17,6 @@ ul {
 h2 {
     //font
     color: white;
-    font-family: $FontStack_Headings;
-    font-size: $FontSize_m + .2em;
+    font-family: $fontstack-roboto;
+    font-size: $fontsize-m + .2em;
 }

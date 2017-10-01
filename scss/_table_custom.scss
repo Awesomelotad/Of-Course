@@ -1,3 +1,5 @@
+// main: complete.scss
+
 #CustomTable {
     th {
         //font
@@ -21,7 +23,7 @@
         }
     }
     //font
-    font-size: $FontSize_m + .2em;
+    font-size: $fontsize-m + .2em;
     &_wrapper {
         //dimension
         margin-top: 1.2em;

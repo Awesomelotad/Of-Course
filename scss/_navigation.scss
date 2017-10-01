@@ -1,3 +1,5 @@
+// main: complete.scss
+
 .Navigation {
     //layout
     display: inline-flex;
@@ -26,24 +28,24 @@
         cursor: pointer;
         border: none;
         //font
-        font-family: $FontStack_Links;
-        font-size: $FontSize_m;
+        font-family: $fontstack-lato;
+        font-size: $fontsize-m;
         font-weight: bold;
         text-decoration: none;
-        color: $FontColor_Navigation;
+        color: $fontcolor-navigation;
         //animation
         transition-duration: 0.15s;
         transition-property: color, background-color;
         &:hover {
             //decoration
-            background: $BgColor_WGPGreen_Solid;
+            background: $bg-wgpgreen-solid;
             //font
             color: white;
             span {
                 //decoration
                 background: white;
                 //font
-                color: $FontColor_Navigation;
+                color: $fontcolor-navigation;
             }
         }
     }
@@ -52,7 +54,7 @@
         padding: 3px 8px;
         margin-left: 5px;
         color: white;
-        background: $FontColor_Navigation;
+        background: $fontcolor-navigation;
         transition-duration: 0.15s;
         transition-property: color, background-color;
         cursor: pointer;
@@ -71,7 +73,7 @@
             }
             .DropButton {
                 //decoration
-                background-color: $BgColor_WGPGreen_Solid;
+                background-color: $bg-wgpgreen-solid;
                 //font
                 color: white;
             }
@@ -95,16 +97,16 @@
             //decoration
             background-color: white;
             //font
-            color: $FontColor_Navigation;
+            color: $fontcolor-navigation;
             text-decoration: none;
             &:hover {
                 //decoration
-                background-color: $BgColor_WGPGreen_Solid;
+                background-color: $bg-wgpgreen-solid;
                 //font
                 color: white;
             }
         }
     }
-    
-    
+
+
 }

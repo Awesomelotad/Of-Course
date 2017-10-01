@@ -1,2 +1,945 @@
-html{width:100%;height:100%;max-width:100%;overflow-x:hidden;background:#363740 url("../media/bg.jpg") repeat scroll}body{padding:0px;margin:0px;width:100%;min-height:100%}a{text-decoration:none;color:#4b8ddb}.PageLoader{width:100%;height:100%}.hidden{display:none;visibility:hidden}.Selection .SelectCentered a.red,.Requests .red.RequestsButton,table.dataTable .red.DatesButton,.Selection .SelectCentered a.blue,.Requests .blue.RequestsButton,table.dataTable .blue.DatesButton,.Selection .SelectCentered a.green,.Requests .green.RequestsButton,table.dataTable .green.DatesButton{display:inline;min-height:44px;min-width:44px;margin:0 5px;background:#49b94d url("../media/tick.png") no-repeat center;background-size:33px 32px !important;border:1px solid #3a963d;border-radius:7px;font-size:1.2em;font-weight:bold;font-family:"Lato",sans-serif}.Selection .SelectCentered a.red:hover,.Requests .red.RequestsButton:hover,table.dataTable .red.DatesButton:hover,.Selection .SelectCentered a.blue:hover,.Requests .blue.RequestsButton:hover,table.dataTable .blue.DatesButton:hover,.Selection .SelectCentered a.green:hover,.Requests .green.RequestsButton:hover,table.dataTable .green.DatesButton:hover{background:#42ac46 url("../media/tick.png") no-repeat center;border-color:#328335;cursor:pointer}.Selection .SelectCentered a.red,.Requests .red.RequestsButton,table.dataTable .red.DatesButton{background:#d65a5a url("../media/delete.png") no-repeat center;border-color:#892222}.Selection .SelectCentered a.red:hover,.Requests .red.RequestsButton:hover,table.dataTable .red.DatesButton:hover{background:#d24949 url("../media/delete.png") no-repeat center;border-color:#751d1d}.Selection .SelectCentered a.blue,.Requests .blue.RequestsButton,table.dataTable .blue.DatesButton{background:#4b8ddb url("../media/edit.png") no-repeat center;border-color:#3a519b}.Selection .SelectCentered a.blue:hover,.Requests .blue.RequestsButton:hover,table.dataTable .blue.DatesButton:hover{background:#3a82d8 url("../media/edit.png") no-repeat center;border-color:#334788}.Selection .SelectCentered a:focus,.Requests .RequestsButton:focus,table.dataTable .DatesButton:focus{outline:0}table.top_pattern{width:100%;border-collapse:collapse}table.top_pattern tbody tr td{display:table-cell;width:14%;height:5px;padding:0}table.top_pattern tbody tr td.tc_1{background:#7c8bc5}table.top_pattern tbody tr td.tc_2{background:#799c0c}table.top_pattern tbody tr td.tc_3{background:#2e4795}.radio{margin:0.5rem}.radio label{font-size:1.2em}.radio input[type="radio"]{position:relative;opacity:0}.radio input[type="radio"]+.radio-label:before{content:'';background:white;border-radius:100%;border:1px solid #415086;display:inline-block;width:1em;height:1em;position:relative;margin-right:.8em;vertical-align:top;cursor:pointer;text-align:center;-webkit-transition:all 250ms ease;transition:all 250ms ease}.radio input[type="radio"]:checked+.radio-label:before{background-color:#4b8ddb;-webkit-box-shadow:inset 0 0 0 4px white;box-shadow:inset 0 0 0 4px white;font-size:1.2em}.radio input[type="radio"]:focus+.radio-label:before{outline:none;border-color:#4b8ddb}.radio input[type="radio"]+.radio-label:empty:before{margin-right:0}.Header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;color:white;padding:.7em 0}.Header .Title{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.Header img{padding:10px 15px}.Header h1{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;font-family:"Century Gothic",sans-serif;font-size:1.9em;font-weight:500}.Header .LoginButtonContainer{position:absolute;right:0;margin:auto 1.2em auto 0}.Header .LoginButtonContainer .LoginButton,.Header .LoginButtonContainer .LogoutButton,.Header .LoginButtonContainer .LogoutLink{padding:.6em 2.4em .6em .6em;background:#363740 url("../media/enter.png") no-repeat;background-position:right .4em center;background-size:30px 30px;border:1px solid #8491c3;text-decoration:none;font-family:"Lato",sans-serif;font-size:1.1em;color:#4b8ddb}.Header .LoginButtonContainer :hover{background:#3f414b url("../media/enter_green.png") no-repeat;background-position:right .4em center;background-size:30px 30px;color:#659de0}.Header .LoginButtonContainer .LogoutButton{padding:.6em;background:#363740}.Header .LoginButtonContainer .LogoutButton:hover{background:#363740;color:#4b8ddb}.Header .LoginButtonContainer .LogoutLink{padding:.6em 1em .6em 1.3em;border-left:none;background:#363740 url("../media/exit.png") no-repeat center;background-size:30px 30px}.Header .LoginButtonContainer .LogoutLink:hover{background:#3f414b url("../media/exit_red.png") no-repeat center}.Navigation{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;background:white}.Navigation a{border-top:solid 1px #fff !important;border-bottom:solid 1px #fff !important}.Navigation a,.Navigation .DropButton{text-align:center;padding:.5em;height:100%;background:white;-webkit-box-shadow:0 0 1px transparent;box-shadow:0 0 1px transparent;list-style:none;cursor:pointer;border:none;font-family:"Lato",sans-serif;font-size:1.2em;font-weight:bold;text-decoration:none;color:#3a519b;-webkit-transition-duration:0.15s;transition-duration:0.15s;-webkit-transition-property:color, background-color;transition-property:color, background-color}.Navigation a:hover,.Navigation .DropButton:hover{background:#8ba82e;color:white}.Navigation a:hover span,.Navigation .DropButton:hover span{background:white;color:#3a519b}.Navigation span{border-radius:50%;padding:3px 8px;margin-left:5px;color:white;background:#3a519b;-webkit-transition-duration:0.15s;transition-duration:0.15s;-webkit-transition-property:color, background-color;transition-property:color, background-color;cursor:pointer}.Navigation .DropContainer{position:relative;display:inline-block;border-bottom:solid 1px white;border-top:solid 1px white}.Navigation .DropContainer:hover .DropDown{display:block}.Navigation .DropContainer:hover .DropButton{background-color:#8ba82e;color:white}.Navigation .DropDown{display:none;position:absolute;z-index:1;min-width:220px;-webkit-box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2)}.Navigation .DropDown a{display:block;padding:10px;background-color:white;color:#3a519b;text-decoration:none}.Navigation .DropDown a:hover{background-color:#8ba82e;color:white}.Important{padding:10px;border-bottom:solid 1px black;background:rgba(139,168,46,0.81);text-align:center;font-family:"Lato",sans-serif;font-size:1.2em}h1.Important{margin-bottom:0;margin-top:0em;border-top:solid 1px black;background:rgba(209,209,209,0.7);font-weight:500;font-family:"Roboto",sans-serif;font-size:2.1em}p,ul{font-family:"Tahoma",sans-serif;font-size:1.3em;color:white;line-height:1.3em}ul{margin:1em 0}h2{color:white;font-family:"Roboto",sans-serif;font-size:1.4em}.Container{padding-bottom:2.8em}.Container .Content{margin:1.7em 3em 0em 3em;padding:1.5em;border:1px solid #45464f;background:#363740}.Selection .SelectCentered{margin:3em 0 2em 0;text-align:center}.Selection .SelectCentered img{margin-bottom:1em}.Selection .SelectCentered a.blue{padding:20px;background:#4b8ddb;color:white;font-size:1.2em;font-family:"Lato",sans-serif}.Selection .SelectCentered a.blue:hover{background:#3a82d8}@media screen and (min-width: 1366) and (max-width: 1920){.Requests .Help{display:none;visibility:hidden}}.modal{display:none}.vanilla-modal .modal{display:block;position:fixed;content:"";top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:-1;opacity:0;-webkit-transition:opacity 0.2s, z-index 0s 0.2s;transition:opacity 0.2s, z-index 0s 0.2s;text-align:center;overflow:hidden;overflow-y:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}.vanilla-modal .modal>*{display:inline-block;white-space:normal;vertical-align:middle;text-align:left}.vanilla-modal .modal:before{display:inline-block;overflow:hidden;width:0;height:100%;vertical-align:middle;content:""}.vanilla-modal.modal-visible .modal{z-index:99;opacity:1;-webkit-transition:opacity 0.2s;transition:opacity 0.2s}.modal-inner{position:relative;max-width:90%;max-height:90%;background:#fff;z-index:-1;opacity:0;-webkit-transform:scale(0);transform:scale(0);-webkit-transition:opacity 0.2s, z-index 0s 0.2s, -webkit-transform 0.2s;transition:opacity 0.2s, z-index 0s 0.2s, -webkit-transform 0.2s;transition:opacity 0.2s, transform 0.2s, z-index 0s 0.2s;transition:opacity 0.2s, transform 0.2s, z-index 0s 0.2s, -webkit-transform 0.2s;border-radius:10px}.modal-visible .modal-inner{z-index:100;opacity:1;-webkit-transform:scale(1);transform:scale(1);-webkit-transition:opacity 0.2s, -webkit-transform 0.2s;transition:opacity 0.2s, -webkit-transform 0.2s;transition:opacity 0.2s, transform 0.2s;transition:opacity 0.2s, transform 0.2s, -webkit-transform 0.2s}[data-modal-close]{z-index:2;position:relative;-webkit-transform:translate(35%, -35%);transform:translate(35%, -35%);background:white;border-radius:50%;width:35px;height:35px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;float:right;cursor:pointer}[data-modal-close]:hover{background:#e79f9f}[data-modal-close] img{width:20px;height:20px;margin-left:1px}.ModalForm{padding:35px 30px 30px 30px;background:white;border-radius:10px;font-family:"Century Gothic",sans-serif}.ModalForm ul{padding:0;margin:0;list-style:none}.ModalForm .FormField{display:block;padding:9px;border:1px solid #DDDDDD;margin-bottom:30px;border-radius:3px}.ModalForm .FormField:last-child{margin-bottom:0px;border:none;text-align:center}.ModalForm .FormField>label{display:block;float:left;margin-top:-23px;padding:0 4px 10px 1px;overflow:hidden;background:white;color:#3a519b;font-size:1.4em;font-family:"Lato",sans-serif}.ModalForm .FormField input::-webkit-input-placeholder{font-family:"Roboto",sans-serif;font-weight:lighter;color:#adadad}.ModalForm .FormField input:-ms-input-placeholder{font-family:"Roboto",sans-serif;font-weight:lighter;color:#adadad}.ModalForm .FormField input::placeholder{font-family:"Roboto",sans-serif;font-weight:lighter;color:#adadad}.ModalForm input,.ModalForm textarea,.ModalForm button{display:block;-webkit-box-sizing:border-box;box-sizing:border-box;padding:2px;width:100%;resize:none;outline:none;border:none;font-size:1.3em;font-family:"Roboto",sans-serif}.ModalForm .FormSubmit input,.ModalForm .FormSubmit button{padding:10px;background:#4b8ddb;border:none;border-bottom:3px solid #2d7ad5;border-radius:3px;color:white}.ModalForm .FormSubmit input:hover,.ModalForm .FormSubmit button:hover{background:#3a82d8;cursor:pointer;color:#f2f2f2}.ModalForm .FormSubmit .Red input,.ModalForm .FormSubmit .StaticForm .FormField.Blue input,.StaticForm .ModalForm .FormSubmit .FormField.Blue input,.ModalForm .FormSubmit .Red button,.ModalForm .FormSubmit .StaticForm .FormField.Blue button,.StaticForm .ModalForm .FormSubmit .FormField.Blue button{background:#ce3939;border-bottom-color:#b22c2c}.ModalForm .FormSubmit .Red input:hover,.ModalForm .FormSubmit .StaticForm .FormField.Blue input:hover,.StaticForm .ModalForm .FormSubmit .FormField.Blue input:hover,.ModalForm .FormSubmit .Red button:hover,.ModalForm .FormSubmit .StaticForm .FormField.Blue button:hover,.StaticForm .ModalForm .FormSubmit .FormField.Blue button:hover{background:#c23030}.FormError{display:none;padding:10px 5px;margin-bottom:0;margin-top:0;background:#ce3939;border-top:solid 1px black;border-bottom:solid 1px black;border-radius:0 0 9px 9px;font-family:"Roboto",sans-serif;font-size:1.2em;text-align:center}.easy-autocomplete-container{position:absolute;left:0;z-index:2;width:100%}.easy-autocomplete-container ul{position:relative;top:-1px;display:none;margin-top:0;padding-bottom:0;border-top:1px dotted #ccc;background:#2f3038}.easy-autocomplete-container ul li,.easy-autocomplete-container ul .eac-category{display:block;border-width:0 1px;border-style:solid;border-color:#ccc;-o-border-image:none;border-image:none;background:inherit;font-weight:normal;font-size:14px;padding-left:8px}.easy-autocomplete-container ul li:last-child{border-width:0 1px 1px;border-radius:0 0 2px 2px}.easy-autocomplete-container ul li.selected{background:#2f3038;cursor:pointer}.easy-autocomplete-container ul li.selected div{font-weight:normal}.easy-autocomplete-container ul li div{display:block;word-break:break-all;font-weight:normal}.easy-autocomplete-container ul li b{font-weight:bold}.easy-autocomplete-container ul .eac-category{font-style:italic;color:white}.easy-autocomplete{position:relative}.easy-autocomplete input{float:none}.easy-autocomplete input:hover,.easy-autocomplete input:focus{-webkit-box-shadow:none;box-shadow:none}.easy-autocomplete a{display:block}.StaticForm{width:calc(100% - 32px);padding:2em 1em 1em 1em;min-height:70px;background:#2f3038;border:1px solid #45464f;font-family:"Century Gothic",sans-serif}.StaticForm ul{padding:0;margin:0;list-style:none}.StaticForm .FormField{display:block;padding:9px;border:1px solid #45464f;margin-bottom:30px}.StaticForm .FormField:last-child{margin-bottom:0px;border:none;text-align:center}.StaticForm .FormField>label:first-child{display:block;margin-top:-28px;padding:5px;overflow:hidden;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;width:-ms-fit-content;background:#2f3038;color:#4b8ddb;font-size:1.4em;font-family:"Lato",sans-serif}.StaticForm .FormField input::-webkit-input-placeholder{background:#2f3038;border:none;font-family:"Roboto",sans-serif;font-weight:lighter;color:#adadad}.StaticForm .FormField input:-ms-input-placeholder{background:#2f3038;border:none;font-family:"Roboto",sans-serif;font-weight:lighter;color:#adadad}.StaticForm .FormField input::placeholder{background:#2f3038;border:none;font-family:"Roboto",sans-serif;font-weight:lighter;color:#adadad}.StaticForm .FormField.Split{float:right;display:inline-block;width:calc(50% - 27px);min-height:41px}.StaticForm .FormField.Split button{min-height:41px;background-color:#4b8ddb;cursor:pointer}.StaticForm .FormField.Split button:hover{background-color:#3680d7}.StaticForm .FormField.Split:nth-child(odd){float:left}.StaticForm .FormField.Full{width:calc(100% - 18px);display:inline-block;float:left}.StaticForm .FormField.Red,.StaticForm .FormField.Blue{border:none;padding-top:0;padding-bottom:0}.StaticForm .FormField.Red button,.StaticForm .FormField.Blue button{min-height:61px;background:#ce3939;border:none;border-bottom:3px solid #b22c2c;border-radius:3px;color:white}.StaticForm .FormField.Red button:hover,.StaticForm .FormField.Blue button:hover{background:#c23030;cursor:pointer;color:#f2f2f2}.StaticForm .FormField.Blue button{background:#415bae;border-bottom:3px solid #374d94}.StaticForm .FormField.Blue button:hover{background:#3a519b}.StaticForm input,.StaticForm textarea,.StaticForm button,.StaticForm select{display:block;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0;resize:none;width:100%;margin-left:5px;outline:none;border:none;background-color:#2f3038;font-size:1.3em;font-family:"Roboto",sans-serif;color:white}.StaticForm .FormSubmit input,.StaticForm .FormSubmit button,.StaticForm .FormSubmit select{padding:10px;background:#415bae;border:none;border-bottom:3px solid #1b3669;color:white}.StaticForm .FormSubmit input:hover,.StaticForm .FormSubmit button:hover,.StaticForm .FormSubmit select:hover{background:#3a519b;cursor:pointer;color:#f2f2f2}table.dataTable{margin-right:0px !important;color:black}table.dataTable tr{font-family:"Roboto",sans-serif}table.dataTable tr:first-child{border-top:none}table.dataTable tr:hover{background-color:#ededed !important}table.dataTable tr.optional{background-color:#a9ca3f !important}table.dataTable tr.optional:hover{background-color:#b2d053 !important}table.dataTable tr.required{background-color:#ffd72f !important}table.dataTable tr.required:hover{background-color:#ffda3e !important}table.dataTable th{font-family:"Lato",sans-serif;font-size:1.3em}table.dataTable th:nth-child(odd){background-color:#7a88be}table.dataTable th:nth-child(even){background-color:#8491c3}table.dataTable td{padding:0.4em 0.5em !important}table.dataTable ul{display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}table.dataTable li{display:-webkit-inline-box !important;display:-ms-inline-flexbox !important;display:inline-flex !important;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.dataTables_info,.dataTables_filter,.dataTables_length{color:#fff !important}.dataTables_filter{margin-bottom:.35em}th.dt-center,td.dt-center{outline:none !important;text-align:center}th.dt-center:focus,td.dt-center:focus{outline:none !important}.dt-button{position:relative;display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;margin-right:0.333em;padding:0.5em 1em .5em 1.8em;white-space:nowrap;overflow:hidden;cursor:pointer;background:#49b94d url("../media/add.png") no-repeat;background-position:left .5em center;background-size:1em 1em;border:1px solid #3a963d;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;outline:none;font-weight:bold;font-family:"Roboto",sans-serif;font-size:1em;color:#000 !important}.dt-button span{font-size:1.2em}.dt-button:hover{background:#42ac46 url("../media/add.png") no-repeat;background-position:left .5em center;background-size:1em 1em;cursor:pointer}.dt-buttons{float:left}.dtr-title{color:black;font-family:"Roboto",sans-serif;font-weight:500 !important;font-size:1em}.dtr-data{margin-left:20px;color:black;font-family:"Tahoma",sans-serif;font-size:.9em;line-height:normal}#CustomTable,#DatesTable_wrapper table,#ContactTable,#YearTable,#RequestsTable{font-size:1.4em}#CustomTable th,#DatesTable_wrapper table th,#ContactTable th,#YearTable th,#RequestsTable th{font-weight:lighter !important;text-align:left !important}#CustomTable a,#DatesTable_wrapper table a,#ContactTable a,#YearTable a,#RequestsTable a{text-decoration:none}#CustomTable a:hover,#DatesTable_wrapper table a:hover,#ContactTable a:hover,#YearTable a:hover,#RequestsTable a:hover{color:#0000b3;text-decoration:underline}#CustomTable tr td,#DatesTable_wrapper table tr td,#ContactTable tr td,#YearTable tr td,#RequestsTable tr td{max-height:50px}#CustomTable tr td:first-child,#DatesTable_wrapper table tr td:first-child,#ContactTable tr td:first-child,#YearTable tr td:first-child,#RequestsTable tr td:first-child{padding-left:25px !important}#CustomTable_wrapper{margin-top:1.2em}#DatesTable_wrapper table tr td:last-child{min-width:110px !important}#YearTable_wrapper .dataTables_filter{margin-right:16px}
+html {
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+				overflow-x: hidden;
+				background: #363740 url("../media/bg.jpg") repeat scroll;
+}
+
+body {
+				padding: 0px;
+				margin: 0px;
+				width: 100%;
+				min-height: 100%;
+}
+
+a {
+				text-decoration: none;
+				color: #4b8ddb;
+}
+
+.PageLoader {
+				width: 100%;
+				height: 100%;
+}
+
+.hidden {
+				display: none;
+				visibility: hidden;
+}
+
+.Selection .SelectCentered a.red, .Requests .red.RequestsButton, table.dataTable .red.DatesButton, .Selection .SelectCentered a.blue, .Requests .blue.RequestsButton, table.dataTable .blue.DatesButton, .Selection .SelectCentered a.green, .Requests .green.RequestsButton, table.dataTable .green.DatesButton {
+				display: inline;
+				min-height: 44px;
+				min-width: 44px;
+				margin: 0 5px;
+				background: #49b94d url("../media/tick.png") no-repeat center;
+				background-size: 33px 32px !important;
+				border: 1px solid #3a963d;
+				border-radius: 7px;
+				font-size: 1.2em;
+				font-weight: bold;
+				font-family: "Lato", sans-serif;
+}
+
+.Selection .SelectCentered a.red:hover, .Requests .red.RequestsButton:hover, table.dataTable .red.DatesButton:hover, .Selection .SelectCentered a.blue:hover, .Requests .blue.RequestsButton:hover, table.dataTable .blue.DatesButton:hover, .Selection .SelectCentered a.green:hover, .Requests .green.RequestsButton:hover, table.dataTable .green.DatesButton:hover {
+				background: #42ac46 url("../media/tick.png") no-repeat center;
+				border-color: #328335;
+				cursor: pointer;
+}
+
+.Selection .SelectCentered a.red, .Requests .red.RequestsButton, table.dataTable .red.DatesButton {
+				background: #d65a5a url("../media/delete.png") no-repeat center;
+				border-color: #892222;
+}
+
+.Selection .SelectCentered a.red:hover, .Requests .red.RequestsButton:hover, table.dataTable .red.DatesButton:hover {
+				background: #d24949 url("../media/delete.png") no-repeat center;
+				border-color: #751d1d;
+}
+
+.Selection .SelectCentered a.blue, .Requests .blue.RequestsButton, table.dataTable .blue.DatesButton {
+				background: #4b8ddb url("../media/edit.png") no-repeat center;
+				border-color: #3a519b;
+}
+
+.Selection .SelectCentered a.blue:hover, .Requests .blue.RequestsButton:hover, table.dataTable .blue.DatesButton:hover {
+				background: #3a82d8 url("../media/edit.png") no-repeat center;
+				border-color: #334788;
+}
+
+.Selection .SelectCentered a:focus, .Requests .RequestsButton:focus, table.dataTable .DatesButton:focus {
+				outline: 0;
+}
+
+table.top_pattern {
+				width: 100%;
+				border-collapse: collapse;
+}
+
+table.top_pattern tbody tr td {
+				display: table-cell;
+				width: 14%;
+				height: 5px;
+				padding: 0;
+}
+
+table.top_pattern tbody tr td.tc_1 {
+				background: #7c8bc5;
+}
+
+table.top_pattern tbody tr td.tc_2 {
+				background: #799c0c;
+}
+
+table.top_pattern tbody tr td.tc_3 {
+				background: #2e4795;
+}
+
+.radio {
+				margin: 0.5rem;
+}
+
+.radio label {
+				font-size: 1.2em;
+}
+
+.radio input[type="radio"] {
+				position: relative;
+				opacity: 0;
+}
+
+.radio input[type="radio"] + .radio-label:before {
+				content: '';
+				background: white;
+				border-radius: 100%;
+				border: 1px solid #415086;
+				display: inline-block;
+				width: 1em;
+				height: 1em;
+				position: relative;
+				margin-right: .8em;
+				vertical-align: top;
+				cursor: pointer;
+				text-align: center;
+				transition: all 250ms ease;
+}
+
+.radio input[type="radio"]:checked + .radio-label:before {
+				background-color: #4b8ddb;
+				box-shadow: inset 0 0 0 4px white;
+				font-size: 1.2em;
+}
+
+.radio input[type="radio"]:focus + .radio-label:before {
+				outline: none;
+				border-color: #4b8ddb;
+}
+
+.radio input[type="radio"] + .radio-label:empty:before {
+				margin-right: 0;
+}
+
+.Header {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				color: white;
+				padding: .7em 0;
+}
+
+.Header .Title {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+}
+
+.Header img {
+				padding: 10px 15px;
+}
+
+.Header h1 {
+				display: inline-flex;
+				font-family: "Roboto", sans-serif;
+				font-size: 1.9em;
+				font-weight: 500;
+}
+
+.Header .LoginButtonContainer {
+				position: absolute;
+				right: 0;
+				margin: auto 1.2em auto 0;
+}
+
+.Header .LoginButtonContainer .LoginButton, .Header .LoginButtonContainer .LogoutButton, .Header .LoginButtonContainer .LogoutLink {
+				padding: .6em 2.4em .6em .6em;
+				background: #363740 url("../media/enter.png") no-repeat;
+				background-position: right .4em center;
+				background-size: 30px 30px;
+				border: 1px solid #8491c3;
+				text-decoration: none;
+				font-family: "Lato", sans-serif;
+				font-size: 1.1em;
+				color: #4b8ddb;
+}
+
+.Header .LoginButtonContainer :hover {
+				background: #3f414b url("../media/enter_green.png") no-repeat;
+				background-position: right .4em center;
+				background-size: 30px 30px;
+				color: #659de0;
+}
+
+.Header .LoginButtonContainer .LogoutButton {
+				padding: .6em;
+				background: #363740;
+}
+
+.Header .LoginButtonContainer .LogoutButton:hover {
+				background: #363740;
+				color: #4b8ddb;
+}
+
+.Header .LoginButtonContainer .LogoutLink {
+				padding: .6em 1em .6em 1.3em;
+				border-left: none;
+				background: #363740 url("../media/exit.png") no-repeat center;
+				background-size: 30px 30px;
+}
+
+.Header .LoginButtonContainer .LogoutLink:hover {
+				background: #3f414b url("../media/exit_red.png") no-repeat center;
+}
+
+.Navigation {
+				display: inline-flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				background: white;
+}
+
+.Navigation a {
+				border-top: solid 1px white !important;
+				border-bottom: solid 1px white !important;
+}
+
+.Navigation a, .Navigation .DropButton {
+				text-align: center;
+				padding: .5em;
+				height: 100%;
+				background: white;
+				box-shadow: 0 0 1px transparent;
+				list-style: none;
+				cursor: pointer;
+				border: none;
+				font-family: "Lato", sans-serif;
+				font-size: 1.2em;
+				font-weight: bold;
+				text-decoration: none;
+				color: #3a519b;
+				transition-duration: 0.15s;
+				transition-property: color, background-color;
+}
+
+.Navigation a:hover, .Navigation .DropButton:hover {
+				background: #8ba82e;
+				color: white;
+}
+
+.Navigation a:hover span, .Navigation .DropButton:hover span {
+				background: white;
+				color: #3a519b;
+}
+
+.Navigation span {
+				border-radius: 50%;
+				padding: 3px 8px;
+				margin-left: 5px;
+				color: white;
+				background: #3a519b;
+				transition-duration: 0.15s;
+				transition-property: color, background-color;
+				cursor: pointer;
+}
+
+.Navigation .DropContainer {
+				position: relative;
+				display: inline-block;
+				border-bottom: solid 1px white;
+				border-top: solid 1px white;
+}
+
+.Navigation .DropContainer:hover .DropDown {
+				display: block;
+}
+
+.Navigation .DropContainer:hover .DropButton {
+				background-color: #8ba82e;
+				color: white;
+}
+
+.Navigation .DropDown {
+				display: none;
+				position: absolute;
+				z-index: 1;
+				min-width: 220px;
+				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.Navigation .DropDown a {
+				display: block;
+				padding: 10px;
+				background-color: white;
+				color: #3a519b;
+				text-decoration: none;
+}
+
+.Navigation .DropDown a:hover {
+				background-color: #8ba82e;
+				color: white;
+}
+
+.Important {
+				padding: 10px;
+				border-bottom: solid 1px black;
+				background: rgba(139, 168, 46, 0.81);
+				text-align: center;
+				font-family: "Lato", sans-serif;
+				font-size: 1.2em;
+}
+
+h1.Important {
+				margin-bottom: 0;
+				margin-top: 0em;
+				border-top: solid 1px black;
+				background: rgba(249, 249, 249, 0.14);
+				font-weight: 500;
+				font-family: "Roboto", sans-serif;
+				font-size: 2.1em;
+}
+
+p, ul {
+				font-family: "Tahoma", sans-serif;
+				font-size: 1.3em;
+				color: white;
+				line-height: 1.3em;
+}
+
+ul {
+				margin: 1em 0;
+}
+
+h2 {
+				color: white;
+				font-family: "Roboto", sans-serif;
+				font-size: 1.4em;
+}
+
+.Container {
+				padding-bottom: 2.8em;
+}
+
+.Container .Content {
+				margin: 1.7em 3em 0em 3em;
+				padding: 1.5em;
+				border: 1px solid #45464f;
+				background: #363740;
+}
+
+.Selection .SelectCentered {
+				margin: 3em 0 2em 0;
+				text-align: center;
+}
+
+.Selection .SelectCentered img {
+				margin-bottom: 1em;
+}
+
+.Selection .SelectCentered a.blue {
+				padding: 20px;
+				background: #4b8ddb;
+				color: white;
+				font-size: 1.2em;
+				font-family: "Lato", sans-serif;
+}
+
+.Selection .SelectCentered a.blue:hover {
+				background: #3a82d8;
+}
+
+@media screen and (min-width: 1366) and (max-width: 1920) {
+				.Requests .Help {
+								display: none;
+								visibility: hidden;
+				}
+}
+
+.modal {
+				display: none;
+}
+
+.vanilla-modal .modal {
+				display: block;
+				position: fixed;
+				content: "";
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.6);
+				z-index: -1;
+				opacity: 0;
+				transition: opacity 0.2s, z-index 0s 0.2s;
+				text-align: center;
+				overflow: hidden;
+				overflow-y: auto;
+				white-space: nowrap;
+				-webkit-overflow-scrolling: touch;
+}
+
+.vanilla-modal .modal > * {
+				display: inline-block;
+				white-space: normal;
+				vertical-align: middle;
+				text-align: left;
+}
+
+.vanilla-modal .modal:before {
+				display: inline-block;
+				overflow: hidden;
+				width: 0;
+				height: 100%;
+				vertical-align: middle;
+				content: "";
+}
+
+.vanilla-modal.modal-visible .modal {
+				z-index: 99;
+				opacity: 1;
+				transition: opacity 0.2s;
+}
+
+.modal-inner {
+				position: relative;
+				max-width: 90%;
+				max-height: 90%;
+				background: #fff;
+				z-index: -1;
+				opacity: 0;
+				transform: scale(0);
+				transition: opacity 0.2s, transform 0.2s, z-index 0s 0.2s;
+				border-radius: 10px;
+}
+
+.modal-visible .modal-inner {
+				z-index: 100;
+				opacity: 1;
+				transform: scale(1);
+				transition: opacity 0.2s, transform 0.2s;
+}
+
+[data-modal-close] {
+				z-index: 2;
+				position: relative;
+				transform: translate(35%, -35%);
+				background: white;
+				border-radius: 50%;
+				width: 35px;
+				height: 35px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				float: right;
+				cursor: pointer;
+}
+
+[data-modal-close]:hover {
+				background: #e79f9f;
+}
+
+[data-modal-close] img {
+				width: 20px;
+				height: 20px;
+				margin-left: 1px;
+}
+
+.ModalForm {
+				padding: 35px 30px 30px 30px;
+				background: white;
+				border-radius: 10px;
+				font-family: "Century Gothic", sans-serif;
+}
+
+.ModalForm ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+}
+
+.ModalForm .FormField {
+				display: block;
+				padding: 9px;
+				border: 1px solid #DDDDDD;
+				margin-bottom: 30px;
+				border-radius: 3px;
+}
+
+.ModalForm .FormField:last-child {
+				margin-bottom: 0px;
+				border: none;
+				text-align: center;
+}
+
+.ModalForm .FormField > label {
+				display: block;
+				float: left;
+				margin-top: -23px;
+				padding: 0 4px 10px 1px;
+				overflow: hidden;
+				background: white;
+				color: #3a519b;
+				font-size: 1.4em;
+				font-family: "Lato", sans-serif;
+}
+
+.ModalForm .FormField input::placeholder {
+				font-family: "Roboto", sans-serif;
+				font-weight: lighter;
+				color: #adadad;
+}
+
+.ModalForm input, .ModalForm textarea, .ModalForm button {
+				display: block;
+				box-sizing: border-box;
+				padding: 2px;
+				width: 100%;
+				resize: none;
+				outline: none;
+				border: none;
+				font-size: 1.3em;
+				font-family: "Roboto", sans-serif;
+}
+
+.ModalForm .FormSubmit input, .ModalForm .FormSubmit button {
+				padding: 10px;
+				background: #4b8ddb;
+				border: none;
+				border-bottom: 3px solid #2d7ad5;
+				border-radius: 3px;
+				color: white;
+}
+
+.ModalForm .FormSubmit input:hover, .ModalForm .FormSubmit button:hover {
+				background: #3a82d8;
+				cursor: pointer;
+				color: #f2f2f2;
+}
+
+.ModalForm .FormSubmit .Red input, .ModalForm .FormSubmit .StaticForm .FormField.Blue input, .StaticForm .ModalForm .FormSubmit .FormField.Blue input, .ModalForm .FormSubmit .Red button, .ModalForm .FormSubmit .StaticForm .FormField.Blue button, .StaticForm .ModalForm .FormSubmit .FormField.Blue button {
+				background: #ce3939;
+				border-bottom-color: #b22c2c;
+}
+
+.ModalForm .FormSubmit .Red input:hover, .ModalForm .FormSubmit .StaticForm .FormField.Blue input:hover, .StaticForm .ModalForm .FormSubmit .FormField.Blue input:hover, .ModalForm .FormSubmit .Red button:hover, .ModalForm .FormSubmit .StaticForm .FormField.Blue button:hover, .StaticForm .ModalForm .FormSubmit .FormField.Blue button:hover {
+				background: #c23030;
+}
+
+.FormError {
+				display: none;
+				padding: 10px 5px;
+				margin-bottom: 0;
+				margin-top: 0;
+				background: #ce3939;
+				border-top: solid 1px black;
+				border-bottom: solid 1px black;
+				border-radius: 0 0 9px 9px;
+				font-family: "Roboto", sans-serif;
+				font-size: 1.2em;
+				text-align: center;
+}
+
+.easy-autocomplete-container {
+				position: absolute;
+				left: 0;
+				z-index: 2;
+				width: 100%;
+}
+
+.easy-autocomplete-container ul {
+				position: relative;
+				top: -1px;
+				display: none;
+				margin-top: 0;
+				padding-bottom: 0;
+				border-top: 1px dotted #ccc;
+				background: #2f3038;
+}
+
+.easy-autocomplete-container ul li,
+.easy-autocomplete-container ul .eac-category {
+				display: block;
+				border-width: 0 1px;
+				border-style: solid;
+				border-color: #ccc;
+				border-image: none;
+				background: inherit;
+				font-weight: normal;
+				font-size: 14px;
+				padding-left: 8px;
+}
+
+.easy-autocomplete-container ul li:last-child {
+				border-width: 0 1px 1px;
+				border-radius: 0 0 2px 2px;
+}
+
+.easy-autocomplete-container ul li.selected {
+				background: #2f3038;
+				cursor: pointer;
+}
+
+.easy-autocomplete-container ul li.selected div {
+				font-weight: normal;
+}
+
+.easy-autocomplete-container ul li div {
+				display: block;
+				word-break: break-all;
+				font-weight: normal;
+}
+
+.easy-autocomplete-container ul li b {
+				font-weight: bold;
+}
+
+.easy-autocomplete-container ul .eac-category {
+				font-style: italic;
+				color: white;
+}
+
+.easy-autocomplete {
+				position: relative;
+}
+
+.easy-autocomplete input {
+				float: none;
+}
+
+.easy-autocomplete input:hover,
+.easy-autocomplete input:focus {
+				box-shadow: none;
+}
+
+.easy-autocomplete a {
+				display: block;
+}
+
+.StaticForm {
+				display: grid;
+				width: calc(100% - 32px);
+				padding: 2em 1em 1em 1em;
+				min-height: 70px;
+				background: #2f3038;
+				border: 1px solid #45464f;
+				font-family: "Century Gothic", sans-serif;
+}
+
+.StaticForm ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+}
+
+.StaticForm .FormField {
+				display: block;
+				padding: 9px;
+				border: 1px solid #45464f;
+				margin-bottom: 30px;
+}
+
+.StaticForm .FormField:last-child {
+				margin-bottom: 0px;
+				border: none;
+				text-align: center;
+}
+
+.StaticForm .FormField > label:first-child {
+				display: block;
+				margin-top: -28px;
+				padding: 5px;
+				overflow: hidden;
+				width: fit-content;
+				width: -ms-fit-content;
+				background: #2f3038;
+				color: #4b8ddb;
+				font-size: 1.4em;
+				font-family: "Lato", sans-serif;
+}
+
+.StaticForm .FormField input::placeholder {
+				background: #2f3038;
+				border: none;
+				font-family: "Roboto", sans-serif;
+				font-weight: lighter;
+				color: #adadad;
+}
+
+.StaticForm .FormField.Split {
+				width: calc(50% - 27px);
+				min-height: 41px;
+}
+
+.StaticForm .FormField.Split button {
+				min-height: 41px;
+				background-color: #4b8ddb;
+				cursor: pointer;
+}
+
+.StaticForm .FormField.Split button:hover {
+				background-color: #3680d7;
+}
+
+.StaticForm .FormField.Split:nth-child(odd) {
+				float: left;
+}
+
+.StaticForm .FormField.Full {
+				grid-column: 1 / span 2;
+				width: calc(100% - 18px);
+				display: inline-block;
+				float: left;
+}
+
+.StaticForm .FormField.Red, .StaticForm .FormField.Blue {
+				border: none;
+				padding-top: 0;
+				padding-bottom: 0;
+}
+
+.StaticForm .FormField.Red button, .StaticForm .FormField.Blue button {
+				min-height: 61px;
+				background: #ce3939;
+				border: none;
+				border-bottom: 3px solid #b22c2c;
+				border-radius: 3px;
+				color: white;
+}
+
+.StaticForm .FormField.Red button:hover, .StaticForm .FormField.Blue button:hover {
+				background: #c23030;
+				cursor: pointer;
+				color: #f2f2f2;
+}
+
+.StaticForm .FormField.Blue button {
+				background: #415bae;
+				border-bottom: 3px solid #374d94;
+}
+
+.StaticForm .FormField.Blue button:hover {
+				background: #3a519b;
+}
+
+.StaticForm input, .StaticForm textarea, .StaticForm button, .StaticForm select {
+				display: block;
+				box-sizing: border-box;
+				padding: 0;
+				resize: none;
+				width: 100%;
+				margin-left: 5px;
+				outline: none;
+				border: none;
+				background-color: #2f3038;
+				font-size: 1.3em;
+				font-family: "Roboto", sans-serif;
+				color: white;
+}
+
+.StaticForm .FormSubmit input, .StaticForm .FormSubmit button, .StaticForm .FormSubmit select {
+				padding: 10px;
+				background: #415bae;
+				border: none;
+				border-bottom: 3px solid #1b3669;
+				color: white;
+}
+
+.StaticForm .FormSubmit input:hover, .StaticForm .FormSubmit button:hover, .StaticForm .FormSubmit select:hover {
+				background: #3a519b;
+				cursor: pointer;
+				color: #f2f2f2;
+}
+
+table.dataTable {
+				margin-right: 0px !important;
+				color: black;
+}
+
+table.dataTable tr {
+				font-family: "Tahoma", sans-serif;
+}
+
+table.dataTable tr:first-child {
+				border-top: none;
+}
+
+table.dataTable tr:hover {
+				background-color: #ededed !important;
+}
+
+table.dataTable tr.optional {
+				background-color: #a9ca3f !important;
+}
+
+table.dataTable tr.optional:hover {
+				background-color: #b2d053 !important;
+}
+
+table.dataTable tr.required {
+				background-color: #ffd72f !important;
+}
+
+table.dataTable tr.required:hover {
+				background-color: #ffda3e !important;
+}
+
+table.dataTable th {
+				font-family: "Lato", sans-serif;
+				font-size: 1.3em;
+}
+
+table.dataTable th:nth-child(odd) {
+				background-color: #7a88be;
+}
+
+table.dataTable th:nth-child(even) {
+				background-color: #8491c3;
+}
+
+table.dataTable td {
+				padding: 0.4em 0.5em !important;
+}
+
+table.dataTable ul {
+				display: flex !important;
+				flex-direction: column;
+				align-items: stretch;
+}
+
+table.dataTable li {
+				display: inline-flex !important;
+				flex-direction: row;
+}
+
+.dataTables_info, .dataTables_filter, .dataTables_length {
+				color: white !important;
+}
+
+.dataTables_filter {
+				margin-bottom: .35em;
+}
+
+th.dt-center, td.dt-center {
+				outline: none !important;
+				text-align: center;
+}
+
+th.dt-center:focus, td.dt-center:focus {
+				outline: none !important;
+}
+
+.dt-button {
+				position: relative;
+				display: inline-block;
+				box-sizing: border-box;
+				margin-right: 0.333em;
+				padding: 0.5em 1em .5em 1.8em;
+				white-space: nowrap;
+				overflow: hidden;
+				cursor: pointer;
+				background: #49b94d url("../media/add.png") no-repeat;
+				background-position: left .5em center;
+				background-size: 1em 1em;
+				border: 1px solid #3a963d;
+				user-select: none;
+				outline: none;
+				font-weight: bold;
+				font-family: "Lato", sans-serif;
+				font-size: 1em;
+				color: black !important;
+}
+
+.dt-button span {
+				font-size: 1.2em;
+}
+
+.dt-button:hover {
+				background: #42ac46 url("../media/add.png") no-repeat;
+				background-position: left .5em center;
+				background-size: 1em 1em;
+				cursor: pointer;
+}
+
+.dt-buttons {
+				float: left;
+}
+
+.dtr-title {
+				color: black;
+				font-family: "Roboto", sans-serif;
+				font-weight: 500 !important;
+				font-size: 1em;
+}
+
+.dtr-data {
+				margin-left: 20px;
+				color: black;
+				font-family: "Tahoma", sans-serif;
+				font-size: 0.9em;
+				line-height: normal;
+}
+
+#CustomTable, #DatesTable_wrapper table, #ContactTable, #YearTable, #RequestsTable {
+				font-size: 1.4em;
+}
+
+#CustomTable th, #DatesTable_wrapper table th, #ContactTable th, #YearTable th, #RequestsTable th {
+				font-weight: lighter !important;
+				text-align: left !important;
+}
+
+#CustomTable a, #DatesTable_wrapper table a, #ContactTable a, #YearTable a, #RequestsTable a {
+				text-decoration: none;
+}
+
+#CustomTable a:hover, #DatesTable_wrapper table a:hover, #ContactTable a:hover, #YearTable a:hover, #RequestsTable a:hover {
+				color: #0000b3;
+				text-decoration: underline;
+}
+
+#CustomTable tr td, #DatesTable_wrapper table tr td, #ContactTable tr td, #YearTable tr td, #RequestsTable tr td {
+				max-height: 50px;
+}
+
+#CustomTable tr td:first-child, #DatesTable_wrapper table tr td:first-child, #ContactTable tr td:first-child, #YearTable tr td:first-child, #RequestsTable tr td:first-child {
+				padding-left: 25px !important;
+}
+
+#CustomTable_wrapper {
+				margin-top: 1.2em;
+}
+
+#DatesTable_wrapper table tr td:last-child {
+				min-width: 110px !important;
+}
+
+#YearTable_wrapper .dataTables_filter {
+				margin-right: 16px;
+}
+
 /*# sourceMappingURL=complete.css.map */

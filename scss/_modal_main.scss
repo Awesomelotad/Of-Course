@@ -1,3 +1,5 @@
+// main: complete.scss
+
 .modal {
     display: none;
 }
@@ -77,7 +79,7 @@
     float: right;
     cursor: pointer;
     &:hover {
-        background: lighten($BgColor_Red_Solid, 25%);
+        background: lighten($bg-red-solid, 25%);
     }
     img {
         width: 20px;

@@ -1,13 +1,15 @@
+// main: complete.scss
+
 .Important {
     //dimension
     padding: 10px;
     //decoration
     border-bottom: solid 1px black;
-    background: $BgColor_WGPGreen_SemiFade;
+    background: $bg-wgpgreen-semifade;
     //font
     text-align: center;
-    font-family: $FontStack_Links;
-    font-size: $FontSize_m;
+    font-family: $fontstack-lato;
+    font-size: $fontsize-m;
 }
 
 h1.Important {
@@ -16,9 +18,9 @@ h1.Important {
     margin-top: 0em;
     //decoration
     border-top: solid 1px black;
-    background: $BgColor_Grey_Fade;
+    background: $bg-dgrey-fade;
     //font
     font-weight: 500;
-    font-family: $FontStack_Headings;
-    font-size: $FontSize_l + .3em;
+    font-family: $fontstack-roboto;
+    font-size: $fontsize-l + .3em;
 }

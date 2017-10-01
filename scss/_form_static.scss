@@ -1,17 +1,21 @@
+// main: complete.scss
+
 .StaticForm {
+    //layout
+	display: grid;
     //dimension
     width: calc(100% - 32px);
     padding: 2em 1em 1em 1em;
     min-height: 70px;
     //decoration
-    background: darken($BgColor_DGrey_Solid, 3%);
-    border: 1px solid $BgColor_DGrey_Border;
+    background: darken($bg-dgrey-solid, 3%);
+    border: 1px solid $bg-dgrey-border;
     //font
-    font-family: $FontStack_Titles;
+    font-family: $fontstack-century;
     ul {
         //dimension
         padding: 0;
-        margin: 0;   
+        margin: 0;
         //decoration
         list-style: none;
     }
@@ -21,7 +25,7 @@
         //dimension
         padding: 9px;
         //decoration
-        border: 1px solid $BgColor_DGrey_Border;
+        border: 1px solid $bg-dgrey-border;
         margin-bottom: 30px;
         &:last-child {
             //dimension
@@ -41,25 +45,22 @@
             width: fit-content;
             width: -ms-fit-content;
             //decoration
-            background: darken($BgColor_DGrey_Solid, 3%);
+            background: darken($bg-dgrey-solid, 3%);
             //font
-            color: $FontColor_Links;
-            font-size: $FontSize_l - .4em;
-            font-family: $FontStack_Links;
+            color: $fontcolor-links;
+            font-size: $fontsize-l - .4em;
+            font-family: $fontstack-lato;
         }
         & input::placeholder {
             //decoration
-            background: darken($BgColor_DGrey_Solid, 3%);
+            background: darken($bg-dgrey-solid, 3%);
             border: none;
             //font
-            font-family: $FontStack_Headings;
+            font-family: $fontstack-roboto;
             font-weight: lighter;
             color: darken(lightgray, 15%);
         }
         &.Split {
-            //layout
-            float: right;
-            display: inline-block;
             //dimension
             width: calc(50% - 27px);
             min-height: 41px;
@@ -67,11 +68,11 @@
                 //dimension
                 min-height: 41px;
                 //decoration
-                background-color: $FontColor_Links;
+                background-color: $fontcolor-links;
                 cursor: pointer;
                 &:hover {
                     //decoration
-                    background-color: darken($FontColor_Links, 5%);
+                    background-color: darken($fontcolor-links, 5%);
                 }
             }
             &:nth-child(odd) {
@@ -80,6 +81,7 @@
             }
         }
         &.Full {
+			grid-column: 1 / span 2;
             width: calc(100% - 18px);
             display: inline-block;
             float: left;
@@ -92,15 +94,15 @@
                 //dimension
                 min-height: 61px;
                 //decoration
-                background: $BgColor_Red_Solid;
+                background: $bg-red-solid;
                 border: none;
-                border-bottom: 3px solid darken($BgColor_Red_Solid, 8%);
+                border-bottom: 3px solid darken($bg-red-solid, 8%);
                 border-radius: 3px;
                 //font
                 color: white;
                 &:hover {
                     //decoration
-                    background: darken($BgColor_Red_Solid, 4%);
+                    background: darken($bg-red-solid, 4%);
                     cursor: pointer;
                     //font
                     color: darken(white, 5%);
@@ -112,10 +114,10 @@
             @extend .Red;
             button {
                 //decoration
-                background: lighten($FontColor_Navigation, 5%);
-                border-bottom: 3px solid darken($FontColor_Navigation, 2%);
+                background: lighten($fontcolor-navigation, 5%);
+                border-bottom: 3px solid darken($fontcolor-navigation, 2%);
                 &:hover {
-                    background: $FontColor_Navigation;
+                    background: $fontcolor-navigation;
                 }
             }
         }
@@ -132,10 +134,10 @@
         //decoration
         outline: none;
         border: none;
-        background-color: darken($BgColor_DGrey_Solid, 3%);
+        background-color: darken($bg-dgrey-solid, 3%);
         //font
-        font-size: $FontSize_m + .1em;
-        font-family: $FontStack_Headings;
+        font-size: $fontsize-m + .1em;
+        font-family: $fontstack-roboto;
         color: white;
     }
     .FormSubmit {
@@ -143,14 +145,14 @@
             //dimension
             padding: 10px;
             //decoration
-            background: lighten($FontColor_Navigation, 5%);
+            background: lighten($fontcolor-navigation, 5%);
             border: none;
             border-bottom: 3px solid #1b3669;
             //font
             color: white;
             &:hover {
                 //decoration
-                background: $FontColor_Navigation;
+                background: $fontcolor-navigation;
                 cursor: pointer;
                 //font
                 color: darken(white, 5%);
