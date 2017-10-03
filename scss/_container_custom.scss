@@ -9,6 +9,8 @@
         img {
             //dimension
             margin-bottom: 1em;
+			height: auto;
+			max-width: 100%;
         }
         a {
             //extension
@@ -38,7 +40,7 @@
     }
     .Help {
         //layout
-        @include bp(desktop) {
+        @include bp(xl) {
             display: none;
             visibility: hidden;
         }

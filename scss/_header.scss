@@ -1,87 +1,131 @@
 // main: complete.scss
 
-.Header {
+.header {
     //layout
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+	grid-template-columns: .8fr 1.6fr .8fr;
+	grid-template-areas: "header_logo header_title header_button";
+	@include bp(m) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "header_logo header_button";
+	};
+	@include bp(s) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: "header_logo" "header_button";
+	};
+	grid-template-rows: 100%;
     //font
     color: white;
     //dimension
-    padding: .7em 0;
-    .Title {
-        //layout
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    img {
+    padding: .7rem 0;
+    .logo {
+		//layout
+		grid-area: header_logo;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		grid-column: 1;
+		@include bp(s) {
+			grid-row: 1;
+			align-items: center;
+		};
         //dimension
-        padding: 10px 15px;
+		width: 100%;
+		height: 100%;
+		a {
+			//dimension
+			margin-left: calc(1.5rem - 31px);
+			@include  bp(s) {
+				margin-left: 0;
+			};
+		}
     }
-    h1 {
+    .title {
         //layout
-        display: inline-flex;
+		grid-area: header_title;
+		@include bp(nav) {
+			display: none;
+		};
+		//dimension
+		margin: auto;
         //font
         font-family: $fontstack-roboto;
-        font-size: $fontsize-l + .1em;
-        font-weight: 500;
+        font-size: $fontsize-xl + .1rem;
+        font-weight: 400;
+		text-align: center;
     }
     .LoginButtonContainer {
         //layout
-        position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		grid-area: header_button;
+		@include bp(s) {
+			align-items: center;
+		};
         //dimension
-        right: 0;
-        margin: auto 1.2em auto 0;
-        .LoginButton {
-            //dimension
-            padding: .6em 2.4em .6em .6em;
-            //decoration
-            background: $bg-dgrey-solid url('../media/enter.png') no-repeat;
-            background-position: right .4em center;
-            background-size: 30px 30px;
-            border: 1px solid $bg-wgpblue-solid;
-            //font
-            text-decoration: none;
-            font-family: $fontstack-lato;
-            font-size: $fontsize-m - .1em;
-            color: $fontcolor-links;
-        }:hover {
-            //decoration
-            background: lighten($bg-dgrey-solid, 4%) url('../media/enter_green.png') no-repeat;
-            background-position: right .4em center;
-            background-size: 30px 30px;
-            //font
-            color: lighten($fontcolor-links, 6%);
-        }
-        .LogoutButton {
-            //extension
-            @extend .LoginButton;
-            //dimension
-            padding: .6em;
-            //decoration
-            background: $bg-dgrey-solid;
-            &:hover {
-                //decoration
-                background: $bg-dgrey-solid;
-                //font
-                color: $fontcolor-links;
-            }
-        }
-        .LogoutLink {
-            //extension
-            @extend .LoginButton;
-            //dimension
-            padding: .6em 1em .6em 1.3em;
-            //decoration
-            border-left: none;
-            background: $bg-dgrey-solid url('../media/exit.png') no-repeat center;
-            background-size: 30px 30px;
-            &:hover {
-                background: lighten($bg-dgrey-solid, 4%) url('../media/exit_red.png') no-repeat center;
-            }
-        }
+		width: 100%;
+		height: 100%;
+		.accounts-button-wrapper {
+			//dimension
+			margin-right: 1.5rem;
+			@include bp(s) {
+				margin-right: 0;
+			};
+			.LoginButton {
+	            //dimension
+	            padding: .6rem 2.4rem .6rem .6rem;
+	            //decoration
+	            background: $bg-dgrey-solid url('../media/enter.png') no-repeat;
+	            background-position: right .4rem center;
+	            background-size: 30px 30px;
+	            border: 1px solid $bg-wgpblue-solid;
+	            //font
+	            text-decoration: none;
+	            font-family: $fontstack-lato;
+	            font-size: $fontsize-m;
+	            color: $fontcolor-links;
+				white-space: nowrap;
+	        }:hover {
+	            //decoration
+	            background: lighten($bg-dgrey-solid, 4%) url('../media/enter_green.png') no-repeat;
+	            background-position: right .4rem center;
+	            background-size: 30px 30px;
+	            //font
+	            color: lighten($fontcolor-links, 6%);
+	        }
+	        .LogoutButton {
+	            //extension
+	            @extend .LoginButton;
+				margin-right: 0;
+	            //dimension
+	            padding: .6rem;
+	            //decoration
+	            background: $bg-dgrey-solid;
+	            &:hover {
+	                //decoration
+	                background: $bg-dgrey-solid;
+	                //font
+	                color: $fontcolor-links;
+	            }
+	        }
+	        .LogoutLink {
+	            //extension
+	            @extend .LoginButton;
+	            //dimension
+	            padding: .6rem 1rem .6rem 1.3rem;
+	            //decoration
+	            border-left: none;
+	            background: $bg-dgrey-solid url('../media/exit.png') no-repeat center;
+	            background-size: 30px 30px;
+	            &:hover {
+	                background: lighten($bg-dgrey-solid, 4%) url('../media/exit_red.png') no-repeat center;
+	            }
+	        }
+		}
+
     }
 }

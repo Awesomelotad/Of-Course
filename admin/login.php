@@ -24,7 +24,7 @@
             });
         });
     </script>
-    
+
     <form id="LoginForm" class="ModalForm" method="POST" enctype="multipart/form-data">
         <ul>
             <li class="FormField">

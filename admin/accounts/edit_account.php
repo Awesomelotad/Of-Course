@@ -1,10 +1,3 @@
-<script>
-    var RunOnce = function() {
-        RunOnce = function(){};
-        $('#TeacherPassword').prop('type', 'password');
-    }
-</script>
-
 <div id="department-modal" style="display: none;">
     <h2 id="department-modal-header" style="text-align:center;color:black;"></h2>
     <form class="ModalForm">
@@ -29,7 +22,7 @@
     <div class="Content">
         <h2 style="text-align:center;">All fields except password fields are <u><i>required</i></u>.</h2>
         <form id="TeacherForm" class="StaticForm" enctype="multipart/form-data" autocomplete="off" onkeypress="return event.keyCode != 13;">
-            <ul>
+            <ul class="FormContainer">
                 <li class="FormField Split" style="<?php if ($_SESSION['elevation'] != 3) {echo 'display: none;';} ?>">
                     <label for="teacher">Teacher to edit</label>
                     <input type="text" id="TeacherIdentity" name="teacher" maxlength="255" placeholder="Type teachers code">
@@ -49,11 +42,11 @@
                 </li>
                 <li class="FormField Split FormFade">
                     <label for="password">Teacher password</label>
-                    <input id="TeacherPassword" onfocus="RunOnce();" type="text" name="password" maxlength="255" placeholder="Type new password">
+                    <input id="TeacherPassword" type="password" name="password" maxlength="255" placeholder="Type new password">
                 </li>
                 <li class="FormField Split FormFade">
                     <label for="password_confirm">Confirm password</label>
-                    <input id="TeacherPConfirm" onfocus="RunOnce();" type="text" name="password_confirm" maxlength="255" placeholder="Confirm password">
+                    <input id="TeacherPConfirm" type="password" name="password_confirm" maxlength="255" placeholder="Confirm password">
                 </li>
                 <li class="FormField Split FormFade">
                     <label for="email">Teacher email</label>

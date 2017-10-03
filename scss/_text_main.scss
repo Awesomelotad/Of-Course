@@ -3,20 +3,32 @@
 p {
     //font
     font-family: $fontstack-tahoma;
-    font-size: $fontsize-m + .1em;
+    font-size: $fontsize-m + .1rem;
+	@include bp(m) {
+		font-size: $fontsize-m - .1rem;
+	};
+	@include bp(s) {
+		font-size: $fontsize-xs + .1rem;
+	};
     color: white;
-    line-height: 1.3em;
+    line-height: 1.3rem;
 }
 
 ul {
     //extension
     @extend p;
-    margin: 1em 0;
+    padding-left: 1.5rem;
 }
 
 h2 {
     //font
     color: white;
     font-family: $fontstack-roboto;
-    font-size: $fontsize-m + .2em;
+    font-size: $fontsize-m + .2rem;
+	@include bp(m) {
+		font-size: $fontsize-m;
+	};
+	@include bp(s) {
+		font-size: $fontsize-s - .1rem;
+	};
 }

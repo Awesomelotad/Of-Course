@@ -36,7 +36,7 @@ table.dataTable {
     th {
         //font
         font-family: $fontstack-lato;
-        font-size: $fontsize-m + .1em;
+        font-size: $fontsize-m + .1rem;
         &:nth-child(odd) {
             //decoration
             background-color: darken($bg-wgpblue-solid, 3%);
@@ -48,7 +48,7 @@ table.dataTable {
     }
     td {
         //dimension
-        padding: .4em .5em!important;
+        padding: .4rem .5rem!important;
     }
     ul {
         //layout
@@ -73,7 +73,7 @@ table.dataTable {
 }
 .dataTables_filter {
     //dimension
-    margin-bottom: .35em;
+    margin-bottom: .35rem;
 }
 th.dt-center, td.dt-center {
     //decoration
@@ -90,15 +90,15 @@ th.dt-center, td.dt-center {
     display: inline-block;
     box-sizing: border-box;
     //dimension
-    margin-right: 0.333em;
-    padding: 0.5em 1em .5em 1.8em;
+    margin-right: 0.333rem;
+    padding: 0.5rem 1rem .5rem 1.8rem;
     white-space: nowrap;
     overflow: hidden;
     //decoration
     cursor: pointer;
     background: #49b94d url('../media/add.png') no-repeat;
-    background-position: left .5em center;
-    background-size: 1em 1em;
+    background-position: left .5rem center;
+    background-size: 1rem 1rem;
     border: 1px solid darken(#49b94d, 10%);
     user-select: none;
     outline: none;
@@ -114,8 +114,8 @@ th.dt-center, td.dt-center {
     &:hover {
         //decoration
         background: darken(#49b94d, 4%) url('../media/add.png') no-repeat;
-        background-position: left .5em center;
-        background-size: 1em 1em;
+        background-position: left .5rem center;
+        background-size: 1rem 1rem;
         cursor: pointer;
     }
 }
@@ -136,6 +136,6 @@ th.dt-center, td.dt-center {
     //fonts
     color: black;
     font-family: $fontstack-tahoma;
-    font-size: $fontsize-s - .1em;
+    font-size: $fontsize-s - .1rem;
     line-height: normal;
 }

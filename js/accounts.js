@@ -20,6 +20,7 @@ function GetDepartment(department_id) {
                         },
                         maxNumberOfElements: 8
                     },
+					adjustWidth: false
                 };
                 $("#TeacherDepartment").easyAutocomplete(options);
             } else if ($response.status == 'success' && department_id != 'all') {
@@ -51,6 +52,7 @@ function GetTeacher(identity) {
                         },
                         maxNumberOfElements: 10
                     },
+					adjustWidth: false
                 };
                 $("#TeacherIdentity").easyAutocomplete(options);
             } else if ($response.status == 'success' && identity != 'all') {
@@ -155,6 +157,7 @@ function LoadTeacher() {
             var $response = data;
             var $teacher = $response.data;
             if ($response.status == 'success') {
+				$('.FormFade').css("height", "0");
                 $('.FormFade').fadeOut(200);
                 $('#TeacherCode').val($teacher.teacher_code);
                 $('#TeacherName').val($teacher.name);
@@ -172,6 +175,7 @@ function LoadTeacher() {
                     $('#sysadmin').prop('checked', true);
                 }
                 $('.FormFade').fadeIn(250);
+				$('.FormFade').css("height", "auto");
             } else if ($response.status == 'error') {
                 alert($response.data);
             }
@@ -203,7 +207,7 @@ function RemoveTeacher(sess_id, using_id, e) {
                     location.reload();
                 }
             } else if ($response.status == 'error') {
-                $('#acc_delete_form.FormError').fadeOut(50)
+                $('#acc_delete_form.FormError').fadeOut(50);
                 $('#acc_delete_form.FormError').text($response.data);
                 $('#acc_delete_form.FormError').fadeIn(50);
             }

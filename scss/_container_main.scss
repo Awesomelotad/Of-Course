@@ -2,11 +2,15 @@
 
 .Container {
     //dimension
-    padding-bottom: 2.8em;
+    padding-bottom: 2.8rem;
     .Content {
         //dimension
-        margin: 1.7em 3em 0em 3em;
-        padding: 1.5em;
+        margin: 1.7rem 3rem 0 3em;
+        padding: 1.5rem;
+		@include bp(nav) {
+			margin: 1.7rem 0 0 0;
+			padding: 1.5rem 10px;
+		};
         //decoration
         border: 1px solid $bg-dgrey-border;
         background: $bg-dgrey-solid;

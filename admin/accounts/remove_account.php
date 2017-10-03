@@ -3,7 +3,7 @@
     <div class="Important">Be <i><b>VERY</b></i> careful what you touch here...</div>
     <div class="Content">
         <form id="TeacherDeleteForm" class="StaticForm" enctype="multipart/form-data" autocomplete="off" onkeypress="return event.keyCode != 13;">
-            <ul>
+            <ul class="FormContainer">
                 <li class="FormField Split">
                     <label for="teacher">Teacher to edit</label>
                     <input type="text" id="TeacherIdentity" name="teacher" maxlength="255" placeholder="Type teachers code">

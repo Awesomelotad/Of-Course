@@ -1,8 +1,6 @@
 // main: complete.scss
 
 .StaticForm {
-    //layout
-	display: grid;
     //dimension
     width: calc(100% - 32px);
     padding: 2em 1em 1em 1em;
@@ -12,7 +10,14 @@
     border: 1px solid $bg-dgrey-border;
     //font
     font-family: $fontstack-century;
-    ul {
+    ul.FormContainer {
+	    //layout
+		display: grid;
+		grid-template-columns: repeat(2, minmax(350px, 1fr));
+		@include bp(nav) {
+			grid-template-columns: minmax(300px, auto);
+		};
+		grid-gap: 9px;
         //dimension
         padding: 0;
         margin: 0;
@@ -20,49 +25,17 @@
         list-style: none;
     }
     .FormField {
-        //layout
-        display: block;
-        //dimension
-        padding: 9px;
-        //decoration
-        border: 1px solid $bg-dgrey-border;
-        margin-bottom: 30px;
-        &:last-child {
-            //dimension
-            margin-bottom: 0px;
-            //decoration
-            border: none;
-            //font
-            text-align: center;
-        }
-        & > label:first-child {
-            //layout
-            display: block;
-            //dimenesion
-            margin-top: -28px;
-            padding: 5px;
-            overflow: hidden;
-            width: fit-content;
-            width: -ms-fit-content;
-            //decoration
-            background: darken($bg-dgrey-solid, 3%);
-            //font
-            color: $fontcolor-links;
-            font-size: $fontsize-l - .4em;
-            font-family: $fontstack-lato;
-        }
-        & input::placeholder {
-            //decoration
-            background: darken($bg-dgrey-solid, 3%);
-            border: none;
-            //font
-            font-family: $fontstack-roboto;
-            font-weight: lighter;
-            color: darken(lightgray, 15%);
-        }
+	    width: calc(100% - 20px);
+	    background: $bg-dgrey-solid;
+	    border: 1px solid $bg-dgrey-border;
+	    padding: 9px;
+	    color: white;
+	    font-family: $fontstack-lato;
+		label {
+			padding-left: .5rem;
+		}
         &.Split {
             //dimension
-            width: calc(50% - 27px);
             min-height: 41px;
             button {
                 //dimension
@@ -75,24 +48,19 @@
                     background-color: darken($fontcolor-links, 5%);
                 }
             }
-            &:nth-child(odd) {
-                //layout
-                float: left;
-            }
         }
         &.Full {
 			grid-column: 1 / span 2;
-            width: calc(100% - 18px);
+			@include bp(nav) {
+				grid-column: 1;
+			};
             display: inline-block;
-            float: left;
         }
         &.Red {
-            border: none;
-            padding-top: 0;
-            padding-bottom: 0;
             button {
                 //dimension
                 min-height: 61px;
+				height: 100%;
                 //decoration
                 background: $bg-red-solid;
                 border: none;
@@ -122,27 +90,37 @@
             }
         }
     }
-    input, textarea, button, select {
+    input, textarea, button {
         //layout
         display: block;
         box-sizing: border-box;
         //dimension
-        padding: 0;
         resize: none;
         width: 100%;
-        margin-left: 5px;
+		padding: .5rem;
         //decoration
+		transition: all 0.30s ease-in-out;
         outline: none;
-        border: none;
-        background-color: darken($bg-dgrey-solid, 3%);
+        background-color: lighten($bg-dgrey-solid, 4%);
+		border: 1px solid darken($bg-dgrey-border, 2%);
         //font
-        font-size: $fontsize-m + .1em;
+        font-size: $fontsize-m + .1rem;
         font-family: $fontstack-roboto;
         color: white;
+		&:focus {
+			box-shadow: 0 0 5px $bg-wgpblue-solid;
+	    	border: 1px solid darken($bg-wgpblue-solid, 3%);
+		}
     }
     .FormSubmit {
-        input, button, select {
+		//layout
+		grid-column: 1 / span 2;
+		@include bp(nav) {
+			grid-column: 1;
+		};
+        button {
             //dimension
+			width: 100%;
             padding: 10px;
             //decoration
             background: lighten($fontcolor-navigation, 5%);

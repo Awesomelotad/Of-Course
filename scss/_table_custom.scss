@@ -2,8 +2,7 @@
 
 #CustomTable {
     th {
-        //font
-        font-weight: lighter!important;
+        //font;
         text-align: left!important;
     }
     a {
@@ -18,12 +17,12 @@
     tr td {
         //dimension
         max-height: 50px;
-        &:first-child {
+        &:not(.child):first-child {
             padding-left: 25px!important;
         }
     }
     //font
-    font-size: $fontsize-m + .2em;
+    font-size: $fontsize-m + .2rem;
     &_wrapper {
         //dimension
         margin-top: 1.2em;

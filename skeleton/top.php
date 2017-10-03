@@ -4,8 +4,9 @@ session_start();
 include('./scripts/config.php');
 ?>
 <html lang=en>
-    
+
     <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="author" content="Brandon Lovegrove" />
@@ -18,7 +19,7 @@ include('./scripts/config.php');
         <script type="text/javascript" src="./datatables/jQuery-2.2.4/jquery-2.2.4.min.js"></script>
         <script src="./autocomplete/js/jquery.easy-autocomplete.min.js"></script>
     </head>
-    
+
     <body>
         <table class="top_pattern">
             <tbody>

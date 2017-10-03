@@ -3,19 +3,19 @@
 $bg-lblue-fade: rgba(228, 234, 255, 0.48);
 $bg-grey-fade: rgba(209, 209, 209, 0.7);
 $bg-dgrey-solid: #363740;
-$bg-dgrey-fade: rgba(249, 249, 249, 0.14);
+$bg-dgrey-fade: rgba(249, 249, 249, 0.4);
 $bg-dgrey-border: #45464f;
 $bg-yellow-fade: rgba(255, 242, 86, 0.54);
 $bg-wgpgreen-solid: #8ba82e;
 $bg-wgpgreen-semifade: rgba(139, 168, 46, 0.81);
 $bg-wgpblue-solid: #8491c3;
 $bg-red-solid: #ce3939;
-$fontsize-xs: .7em;
-$fontsize-s: 1em;
-$fontsize-m: 1.2em;
-$fontsize-l: 1.8em;
-$fontsize-xl: 2.2em;
-$fontsize-xxl: 2.6em;
+$fontsize-xs: .7rem;
+$fontsize-s: 1rem;
+$fontsize-m: 1.2rem;
+$fontsize-l: 1.8rem;
+$fontsize-xl: 2.2rem;
+$fontsize-xxl: 2.6rem;
 $fontstack-century: 'Century Gothic', sans-serif;
 $fontstack-lato: 'Lato', sans-serif;
 $fontstack-tahoma: 'Tahoma', sans-serif;
@@ -24,14 +24,26 @@ $fontcolor-links: #4b8ddb;
 $fontcolor-navigation: #3a519b;
 
 @mixin bp($point) {
-    $laptop: "screen and (min-width: 1366px) and (max-width: 768px)";
-    $desktop: "screen and (min-width: 1366) and (max-width: 1920)";
+	$nav: "screen and (max-width: 887px) and (min-width: 300px)";
+	$s: "screen and (max-width: 460px) and (min-width: 300px)";
+	$m: "screen and (max-width: 887px) and (min-width: 461px)";
+    $l: "screen and (max-width: 1366px) and (min-width: 768px)";
+    $xl: "screen and (max-width: 1920) and (min-width: 1367)";
 
-    @if $point == laptop {
-        @media #{$laptop} {@content;}
-		color: $fontc
+	@if $point == nav {
+		@media #{$nav} {@content;}
+	}
+
+	@if $point == s {
+		@media #{$s} {@content;}
+	}
+    @if $point == m {
+        @media #{$m} {@content;}
     }
-    @if $point == desktop {
-        @media #{$desktop} {@content;}
+    @if $point == l {
+        @media #{$l} {@content;}
+    }
+    @if $point == xl {
+        @media #{$xl} {@content;}
     }
 }

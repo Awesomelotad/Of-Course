@@ -1,112 +1,222 @@
 // main: complete.scss
 
-.Navigation {
-    //layout
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    //dimension
-    width: 100%;
-    //decoration
-    background: white;
-    a {
-        //decoration
-        border-top: solid 1px white!important;
-        border-bottom: solid 1px white!important;
-    }
-    a, .DropButton {
-        //layout
-        text-align: center;
-        //dimension
-        padding: .5em;
-        height: 100%;
-        //decoration
-        background: white;
-        box-shadow: 0 0 1px transparent;
-        list-style: none;
-        cursor: pointer;
-        border: none;
-        //font
-        font-family: $fontstack-lato;
-        font-size: $fontsize-m;
-        font-weight: bold;
-        text-decoration: none;
-        color: $fontcolor-navigation;
-        //animation
-        transition-duration: 0.15s;
-        transition-property: color, background-color;
-        &:hover {
-            //decoration
-            background: $bg-wgpgreen-solid;
-            //font
-            color: white;
-            span {
-                //decoration
-                background: white;
-                //font
-                color: $fontcolor-navigation;
-            }
-        }
-    }
-    span {
-        border-radius: 50%;
-        padding: 3px 8px;
-        margin-left: 5px;
-        color: white;
-        background: $fontcolor-navigation;
-        transition-duration: 0.15s;
-        transition-property: color, background-color;
-        cursor: pointer;
-    }
-    .DropContainer {
-        //layout
-        position: relative;
-        display: inline-block;
-        //decoration
-        border-bottom: solid 1px white;
-        border-top: solid 1px white;
-        &:hover {
-            .DropDown {
-                //layout
-                display: block;
-            }
-            .DropButton {
-                //decoration
-                background-color: $bg-wgpgreen-solid;
-                //font
-                color: white;
-            }
-        }
-    }
-
-    .DropDown {
-        //layout
-        display: none;
-        position: absolute;
-        z-index: 1;
-        //dimension
-        min-width: 220px;
-        //decoration
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        a {
-            //layout
-            display: block;
-            //dimension
-            padding: 10px;
-            //decoration
-            background-color: white;
-            //font
-            color: $fontcolor-navigation;
-            text-decoration: none;
-            &:hover {
-                //decoration
-                background-color: $bg-wgpgreen-solid;
-                //font
-                color: white;
-            }
-        }
-    }
-
+.navigation {
+	//dimension
+	width: 100%;
+	//decoration
+	background: white;
+	.title {
+		//layout
+		display: none;
+		//dimension
+		padding: 1rem;
+		margin: 0;
+		//font
+		color: $fontcolor-navigation;
+		font-size: $fontsize-l;
+	}
+	ul {
+		//layout
+		@include bp(nav) {
+			grid-column: 1 / span 2;
+			&.nav-list {
+				border-top: solid 1px black;
+			}
+			background: #e4e4e4;
+		};
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: nowrap;
+		align-items: center;
+		//dimension
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		&.nav-list.active {
+			//layout
+			display: flex;
+		}
+		li {
+			//layout
+			float: left;
+			position: relative;
+			//decoration
+			list-style: none;
+			a {
+				//layout
+				display: block;
+				//dimension
+				padding: .8rem;
+				//decoration
+		        border-top: solid 1px white!important;
+		        border-bottom: solid 1px white!important;
+				@include bp(nav) {
+					border-bottom: none!important;
+					border-top: solid 1px #e4e4e4!important;
+				};
+				transition: background .15s ease-out, color .15s ease-out;
+				//font
+				font-family: $fontstack-lato;
+				font-size: $fontsize-m;
+				font-weight: bold;
+				text-decoration: none;
+				color: $fontcolor-navigation;
+				.request-count {
+			        border-radius: 50%;
+			        padding: 3px 9px;
+			        margin-left: 5px;
+			        color: white;
+			        background: $fontcolor-navigation;
+			        transition-duration: 0.15s;
+			        transition-property: color, background-color;
+			        cursor: pointer;
+			    }
+				&.active {
+					//decoration
+					background: $bg-wgpgreen-solid;
+					//font
+					color: white;
+					.drop-arrow {
+						//decoration
+						border-left: solid .35rem white;
+					}
+				}
+				&:hover {
+					//font
+					color: white;
+					//decoration
+					background: $bg-wgpgreen-solid;
+					.drop-arrow {
+						//decoration
+						border-left: solid .35rem white;
+					}
+					.request-count {
+		                //decoration
+		                background: white;
+		                //font
+		                color: $fontcolor-navigation;
+		            }
+				}
+				.drop-arrow {
+					//layout
+					display: inline-block;
+					position: relative;
+					//dimension
+					height: 2px;
+					width: 2px;
+					margin-left: .3rem;
+					//decoration
+					border: solid .35rem transparent;
+					border-left: solid .35rem $fontcolor-navigation;
+					transition: border .15s ease-out, transform .05s linear;
+					transform: rotate(0deg);
+					&.active {
+						transform: rotate(90deg);
+					}
+				}
+			}
+		}
+	}
+	.nav-dropdown {
+		//layout
+		display: none;
+		position: absolute;
+		z-index: 1;
+		//decoration
+		background: white;
+		box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+		li {
+			//dimension
+			width: 100%;
+			//font
+			text-align: left;
+		}
+	}
 
 }
+.nav-mobile {
+	//layout
+	display: none;
+	grid-area: navigation_button;
+	//dimension
+	padding: .8rem;
+	width: 32px;
+}
+@include bp(nav) {
+	.nav-mobile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.navigation {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-template-rows: 1fr;
+		grid-template-areas: "navigation_title navigation_button";
+		ul.nav-list {
+			display: none;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			& li {
+				width: 100%;
+				& ul {
+					position: static;
+					li {
+						background: darken(#e4e4e4, 6%);
+						a {
+							padding-left: 1.5rem;
+							&:hover {
+								background: darken($bg-wgpgreen-solid, 5%);
+							}
+						}
+					}
+				}
+			}
+		}
+		.title {
+			grid-area: navigation_title;
+			display: block;
+			font-size: $fontsize-m + .2rem;
+		}
+	}
+	#nav-toggle {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		width: 32px;
+		height: 24px;
+		span, span:before, span:after {
+			cursor: pointer;
+			border-radius: 1px;
+			height: 4px;
+			width: 32px;
+			background: $fontcolor-navigation;
+			position: absolute;
+			display: block;
+			content: '';
+			transition: all .3s ease-in-out;
+		}
+		span:before {
+			top: -10px;
+		}
+		span:after {
+			bottom: -10px;
+		}
+		&.active span {
+			background-color: transparent;
+			&:before {
+		  		top: 0;
+		  		transform: rotate(45deg);
+			}
+			&:after {
+		  		top: 0;
+		  		transform: rotate(-45deg);
+			}
+		}
+	}
+};

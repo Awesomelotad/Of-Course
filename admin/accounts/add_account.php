@@ -1,10 +1,3 @@
-<script>
-    var RunOnce = function() {
-        RunOnce = function(){};
-        $('#TeacherPassword').prop('type', 'password');
-    }
-</script>
-
 <div id="department-modal" style="display: none;">
     <h2 id="department-modal-header" style="text-align:center;color:black;"></h2>
     <form class="ModalForm">
@@ -21,7 +14,7 @@
     <div class="Important">Complete control of account registration</div>
     <div class="Content">
         <form id="TeacherForm" class="StaticForm" enctype="multipart/form-data" autocomplete="off" onkeypress="return event.keyCode != 13;">
-            <ul>
+            <ul class="FormContainer">
                 <li class="FormField Split">
                     <label for="teacher_code">Teacher code</label>
                     <input id="TeacherCode" type="text" name="teacher_code" maxlength="4" placeholder="Type teachers code" autofocus>
@@ -36,7 +29,7 @@
                 </li>
                 <li class="FormField Split">
                     <label for="password">Teacher password</label>
-                    <input id="TeacherPassword" onfocus="RunOnce();" type="text" name="password" maxlength="255" placeholder="Type teachers password">
+                    <input id="TeacherPassword" type="password" name="password" maxlength="255" placeholder="Type teachers password">
                 </li>
                 <li class="FormField Split">
                     <label for="department_id">Teacher department</label>
