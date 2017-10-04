@@ -139,9 +139,23 @@
 	//layout
 	display: none;
 	grid-area: navigation_button;
-	//dimension
-	padding: .8rem;
-	width: 32px;
+	//decoration
+	#nav-toggle {
+		padding: .8rem;
+		transition: background .15s ease-out, color .15s ease-out;
+		&:hover {
+			background: $bg-wgpgreen-solid;
+			span {
+				background: white;
+				&::after {
+					background: white;
+				}
+				&::before {
+					background: white;
+				}
+			}
+		}
+	}
 }
 @include bp(nav) {
 	.nav-mobile {
@@ -189,7 +203,9 @@
 		align-items: center;
 		cursor: pointer;
 		width: 32px;
-		height: 24px;
+		height: 100%;
+		border-bottom: solid 1px white;
+		border-top: solid 1px white;
 		span, span:before, span:after {
 			cursor: pointer;
 			border-radius: 1px;
@@ -208,7 +224,7 @@
 			bottom: -10px;
 		}
 		&.active span {
-			background-color: transparent;
+			background-color: transparent!important;
 			&:before {
 		  		top: 0;
 		  		transform: rotate(45deg);

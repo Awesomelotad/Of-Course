@@ -24,4 +24,18 @@ $(document).ready(function() {
 	$('#nav-toggle').click(function() {
   		$('nav ul.nav-list').toggleClass('active');
 	});
+	$(document).keyup(function(e){
+	    if (e.keyCode === 27) {
+			if ($('.drop-arrow').hasClass('active')) {
+				$('.drop-arrow').removeClass('active');
+				$('.nav-dropdown').hide();
+			}
+			if ($('#nav-toggle').hasClass('active')) {
+			  	$('#nav-toggle').removeClass('active');
+			}
+			if ($('nav ul.nav-list').hasClass('active')) {
+			  	$('nav ul.nav-list').removeClass('active');
+			}
+		}
+	});
 });
