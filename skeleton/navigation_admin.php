@@ -19,16 +19,7 @@ if (isset($_SESSION['status'])) {
 		$requests_result = mysqli_fetch_array($requests_query)[0];
 		?>
 		<nav class="navigation">
-			<?php
-			if (isset($_SESSION['status'])) {
-				if ($_SESSION['status'] == 'active') {
-					$visitor_type = 'Administration';
-				}
-			} else {
-				$visitor_type = 'Selection';
-			}
-			echo "<h1 class=\"title\">".date("Y", strtotime('+1 year'))." Options $visitor_type</h1>";
-			?>
+			<?php echo "<h1 class=\"title\">".date("Y", strtotime('+1 year'))." Options Administration</h1>"; ?>
 			<div class="nav-mobile">
 				<a id="nav-toggle" href="#!"><span></span></a>
 			</div>

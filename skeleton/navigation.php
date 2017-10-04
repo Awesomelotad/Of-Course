@@ -1,14 +1,6 @@
 <nav class="navigation">
-	<?php
-	if (isset($_SESSION['status'])) {
-		if ($_SESSION['status'] == 'active') {
-			$visitor_type = 'Administration';
-		}
-	} else {
-		$visitor_type = 'Selection';
-	}
-	echo "<h1 class=\"title\">".date("Y", strtotime('+1 year'))." Options $visitor_type</h1>";
-	?>
+	<?php echo "<h1 class=\"title\">".date("Y", strtotime('+1 year'))." Options Selection</h1>"; ?>
+	
 	<div class="nav-mobile">
 		<a id="nav-toggle" href="#!"><span></span></a>
 	</div>
@@ -36,7 +28,7 @@
             <li><a href="index.php?page=courses&year=13">- LEVEL 3</a></li>
 		</ul>
 		</li>
-		<li><a href="index.php?page=selection">SELECTION PROCESS</a></li>
+		<li><a href="index.php?page=selection">SUBJECT SELECTION</a></li>
 		<li><a href="index.php?page=contact">CONTACT</a></li>
 		<?php
 		if (isset($_SESSION['user']) && isset($_SESSION['status']) && !isset($_REQUEST['admin'])) { ?>

@@ -7,7 +7,7 @@
     <div class="LoginButtonContainer">
         <?php if (!isset($_SESSION['user'])) { ?>
 		<div class="accounts-button-wrapper">
-        	<a class="LoginButton" href="#login-modal" data-modal-open>STAFF LOGIN</a>
+        	<a class="LoginButton" href="#login-modal" data-modal-open>LOG IN&nbsp;</a>
 		</div>
         <?php } else { ?>
 		<div class="accounts-button-wrapper">

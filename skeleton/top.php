@@ -13,7 +13,7 @@ include('./scripts/config.php');
         <meta charset="UTF-8" />
         <title>Options Selection - demo</title>
         <link rel="icon" type="image/x-icon" href="./media/favicon.ico" />
-        <link rel="stylesheet" href="./css/complete.css" />
+        <link rel="stylesheet" href="./css/complete.min.css" />
         <link rel="stylesheet" href="./datatables/css/datatables.responsive.min.css"/>
         <link rel="stylesheet" href="./datatables/css/datatables.css"/>
         <script type="text/javascript" src="./datatables/jQuery-2.2.4/jquery-2.2.4.min.js"></script>
