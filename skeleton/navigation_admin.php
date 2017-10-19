@@ -38,7 +38,7 @@ if (isset($_SESSION['status'])) {
 						<li><a href="index.php?admin=accounts/add_account">- ADD ACCOUNT</a></li>
 						<?php } ?>
 						<li><a href="index.php?admin=accounts/edit_account">- EDIT ACCOUNT</a></li>
-						<li><a href="#/" <?php if ($_SESSION['elevation'] == 3) {echo "href='index.php?admin=accounts/remove_account'";} else {echo "onclick=\"modal.open('#account-delete-modal');\"";} ?>>- REMOVE ACCOUNT</a></li>
+						<li><a <?php if ($_SESSION['elevation'] == 3) {echo "href='index.php?admin=accounts/remove_account'";} else {echo "href=\"#/\" onclick=\"modal.open('#account-delete-modal');\"";} ?>>- REMOVE ACCOUNT</a></li>
 					</ul>
 					</li>
 				<?php } if($_SESSION['elevation'] >= 0) { ?>
@@ -48,7 +48,7 @@ if (isset($_SESSION['status'])) {
 						<li><a href="index.php?admin=courses/add_course">- ADD COURSE</a></li>
 						<?php } ?>
 						<li><a href="index.php?admin=courses/edit_course">- EDIT COURSE</a></li>
-						<li><a href="#/" <?php if ($_SESSION['elevation'] >= 2) {echo "href='index.php?admin=courses/remove_course'";} else {echo "onclick=\"modal.open('#course-delete-modal');\"";} ?>>- REMOVE COURSE</a></li>
+						<li><a <?php if ($_SESSION['elevation'] >= 2) {echo "href='index.php?admin=courses/remove_course'";} else {echo "href=\"#/\" onclick=\"modal.open('#course-delete-modal');\"";} ?>>- REMOVE COURSE</a></li>
 					</ul>
 					</li>
 				<?php } ?>

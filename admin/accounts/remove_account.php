@@ -5,11 +5,11 @@
         <form id="TeacherDeleteForm" class="StaticForm" enctype="multipart/form-data" method="post" autocomplete="off" onkeypress="return event.keyCode != 13;">
             <ul class="FormContainer">
                 <li class="form-field Split">
-                    <label for="teacher">Teacher to remove</label>
+                    <label for="teacher">Course department</label>
                     <input type="text" id="TeacherIdentity" name="teacher" maxlength="4" placeholder="Type teachers code">
                 </li>
-                <li class="form-field Red Split">
-                    <button id="TeacherRemove">Delete teacher</button>
+                <li class="form-field Blue Split">
+                    <button id="TeacherRemove">Load department</button>
                 </li>
             </ul>
         </form>
