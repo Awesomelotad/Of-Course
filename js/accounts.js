@@ -1,4 +1,3 @@
-$('.FormFade').hide();
 function GetDepartment(department_id) {
     var $data = {
         department_id: department_id
@@ -31,6 +30,7 @@ function GetDepartment(department_id) {
         }
     });
 }
+var $teacher_list = '';
 function GetTeacher(identity) {
     var $data = {
         teacher_code: identity
@@ -55,6 +55,7 @@ function GetTeacher(identity) {
 					adjustWidth: false
                 };
                 $("#TeacherIdentity").easyAutocomplete(options);
+				$teacher_list += $teachers;
             } else if ($response.status == 'success' && identity != 'all') {
                 $('#TeacherIdentity').val($teachers.teacher_code);
                 $('#TeacherCode').val($teachers.teacher_code);
@@ -126,7 +127,6 @@ function AddDepartment() {
     var $data = {
         department: $('#TeacherDepartment').val()
     };
-    console.log($data);
     $.ajax({
         type: "POST",
         url: './scripts/add_department.php',
@@ -157,8 +157,8 @@ function LoadTeacher() {
             var $response = data;
             var $teacher = $response.data;
             if ($response.status == 'success') {
-				$('.FormFade').css("height", "0");
-                $('.FormFade').fadeOut(200);
+				$('.form-fade').css("height", "0");
+                $('.form-fade').fadeOut(200);
                 $('#TeacherCode').val($teacher.teacher_code);
                 $('#TeacherName').val($teacher.name);
                 $('#TeacherEmail').val($teacher.email);
@@ -174,8 +174,8 @@ function LoadTeacher() {
                 } else if ($teacher.elevation == 3) {
                     $('#sysadmin').prop('checked', true);
                 }
-                $('.FormFade').fadeIn(250);
-				$('.FormFade').css("height", "auto");
+                $('.form-fade').fadeIn(250);
+				$('.form-fade').css("height", "auto");
             } else if ($response.status == 'error') {
                 alert($response.data);
             }
@@ -207,13 +207,10 @@ function RemoveTeacher(sess_id, using_id, e) {
                     location.reload();
                 }
             } else if ($response.status == 'error') {
-                $('#acc_delete_form.FormError').fadeOut(50);
-                $('#acc_delete_form.FormError').text($response.data);
-                $('#acc_delete_form.FormError').fadeIn(50);
+                $('#acc_delete_form.form-error').fadeOut(50);
+                $('#acc_delete_form.form-error').text($response.data);
+                $('#acc_delete_form.form-error').fadeIn(50);
             }
-        },
-        complete: function(data) {
-            console.log(data);
         }
     });
 }
@@ -236,6 +233,10 @@ $(document).ready(function() {
     });
     $('#TeacherRemove').click(function(e) {
         e.preventDefault();
-        modal.open('#account-delete-modal');
+		if ($('#TeacherIdentity').val() != '' && $('#TeacherIdentity').val() != null && ($teacher_list.includes($('#TeacherIdentity').val().toUpperCase())) == true) {
+	        modal.open('#account-delete-modal');
+		} else {
+			alert('Invalid teacher code. Please try again or contact I.T. for support.');
+		}
     });
 });

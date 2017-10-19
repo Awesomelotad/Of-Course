@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($dbconnect, $email);
     $password = mysqli_real_escape_string($dbconnect, $password);
 
-    $user_query = mysqli_query($dbconnect, "SELECT * FROM teachers WHERE email = '$email' LIMIT 1");
+    $user_query = mysqli_query($dbconnect, "SELECT * FROM teachers WHERE email='$email' LIMIT 1");
     $user_result = mysqli_fetch_assoc($user_query);
 
     $id = $user_result['t_id'];

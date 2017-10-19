@@ -14,10 +14,10 @@
                     data: $data,
                     success: function (data) {
                         if (data == 'success') {
-                            $('#LoginError').hide();
+                            $('.form-error').hide();
                             window.location = '/OfCourse(Alpha_0)/index.php?admin=home';
                         } else if(data == 'invalid login') {
-                            $('.FormError').show();
+                            $('.form-error').show();
                         }
                     }
                 });
@@ -27,18 +27,18 @@
 
     <form id="LoginForm" class="ModalForm" method="POST" enctype="multipart/form-data">
         <ul>
-            <li class="FormField">
-                <label id="EmailField" for="email">Email</label>
-                <input id="EmailInput" type="email" name="email" maxlength="255" placeholder="Type your school email" autofocus>
+            <li class="form-field">
+                <label for="email">Email</label>
+                <input id="EmailInput" onkeyup="$('.form-error').hide()" type="email" name="email" maxlength="255" placeholder="Type your school email" autofocus>
             </li>
-            <li class="FormField">
+            <li class="form-field">
                 <label for="password">Password</label>
-                <input id="PasswordInput" type="password" name="password" maxlength="255" placeholder="Type your password">
+                <input id="PasswordInput" onkeyup="$('.form-error').hide()" type="password" name="password" maxlength="255" placeholder="Type your password">
             </li>
-            <li class="FormSubmit">
+            <li class="form-submit">
                 <input id="LoginSubmit" type="submit" value="Log in" name="login">
             </li>
-            <h4 class="FormError">Invalid username or password</h4>
+            <h4 class="form-error">Invalid username or password</h4>
         </ul>
     </form>
 </div>

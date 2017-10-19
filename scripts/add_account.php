@@ -6,7 +6,8 @@ $code = $_POST['code'];
 $identity = $_POST['identity'];
 $name = $_POST['name'];
 $email = $_POST['email'];
-$password = $_POST['password'];
+$password = $password_raw = $_POST['password'];
+$password_confirm = $_POST['password_confirm'];
 if ($password != '') {
     $password = password_hash($password, PASSWORD_DEFAULT);
 } else {
@@ -29,8 +30,13 @@ if ($action == 'add') {
             $sql = "INSERT INTO teachers (t_id, teacher_code, department_id, subject, name, email, password, elevation, locked, status) VALUES (NULL, '$code', '$department', '$subject', '$name', '$email', '$password', '$elevation', '0', '1')";
             mysqli_query($dbconnect, $sql);
             if (mysqli_fetch_array(mysqli_query($dbconnect, $sql_exists))[0] == 1) {
-                $status = 'success';
-                $data = $name;
+				if ($password_raw == $password_confirm) {
+	                $status = 'success';
+	                $data = $name;
+				} else {
+					$status = 'error';
+					$data = 'Error: Failed to register teacher. Reason: Passwords do not match.';
+				}
             } else {
                 $status = 'error';
                 $data = 'Error: Failed to register teacher. Reason: Unknown. Contact I.T. for support.';
@@ -59,8 +65,13 @@ if ($action == 'add') {
             }
             mysqli_query($dbconnect, $sql);
             if (mysqli_fetch_array(mysqli_query($dbconnect, $sql_updated))[0] == 1) {
-                $status = 'success';
-                $data = $name;
+				if ($password_raw == $password_confirm) {
+	                $status = 'success';
+	                $data = $name;
+				} else {
+					$status = 'error';
+					$data = 'Error: Failed to update teacher. Reason: Passwords do not match.';
+				}
             } else {
                 $status = 'error';
                 $data = 'Error: Failed to update teacher. Reason: Unknown. Please contact I.T. for support.';

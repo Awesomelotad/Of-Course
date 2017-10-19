@@ -2,7 +2,7 @@
     <h2 id="department-modal-header" style="text-align:center;color:black;"></h2>
     <form class="ModalForm">
         <ul>
-            <li class="FormSubmit">
+            <li class="form-submit">
                 <button id="DepartmentSubmit">Add department</button>
             </li>
         </ul>
@@ -23,45 +23,45 @@
         <h2 style="text-align:center;">All fields except password fields are <u><i>required</i></u>.</h2>
         <form id="TeacherForm" class="StaticForm" enctype="multipart/form-data" autocomplete="off" onkeypress="return event.keyCode != 13;">
             <ul class="FormContainer">
-                <li class="FormField Split" style="<?php if ($_SESSION['elevation'] != 3) {echo 'display: none;';} ?>">
+                <li class="form-field Split" style="<?php if ($_SESSION['elevation'] != 3) {echo 'display: none;';} ?>">
                     <label for="teacher">Teacher to edit</label>
-                    <input type="text" id="TeacherIdentity" name="teacher" maxlength="255" placeholder="Type teachers code">
+                    <input type="text" id="TeacherIdentity" name="teacher" maxlength="4" placeholder="Type teachers code">
                 </li>
                 <?php if ($_SESSION['elevation'] == 3) { ?>
-                <li class="FormField Blue Split">
+                <li class="form-field Blue Split">
                     <button id="TeacherLoad">Load teacher data</button>
                 </li>
                 <?php } ?>
-                <li class="FormField Split FormFade">
+                <li class="form-field Split form-fade">
                     <label for="teacher_code">Teacher code</label>
                     <input id="TeacherCode" type="text" name="teacher_code" maxlength="4" placeholder="Type teacher code">
                 </li>
-                <li class="FormField Split FormFade">
+                <li class="form-field Split form-fade">
                     <label for="name">Teacher name</label>
                     <input id="TeacherName" type="text" name="name" maxlength="255" placeholder="Type new name">
                 </li>
-                <li class="FormField Split FormFade">
+                <li class="form-field Split form-fade">
                     <label for="password">Teacher password</label>
                     <input id="TeacherPassword" type="password" name="password" maxlength="255" placeholder="Type new password">
                 </li>
-                <li class="FormField Split FormFade">
+                <li class="form-field Split form-fade">
                     <label for="password_confirm">Confirm password</label>
                     <input id="TeacherPConfirm" type="password" name="password_confirm" maxlength="255" placeholder="Confirm password">
                 </li>
-                <li class="FormField Split FormFade">
+                <li class="form-field Split form-fade">
                     <label for="email">Teacher email</label>
                     <input id="TeacherEmail" type="email" name="email" maxlength="255" placeholder="Type new email">
                 </li>
-                <li class="FormField Split FormFade">
+                <li class="form-field Split form-fade">
                     <label for="department">Teacher department</label>
                     <input id="TeacherDepartment" type="text" name="department" maxlength="255" placeholder="Type new department">
                 </li>
-                <li class="FormField Full FormFade">
+                <li class="form-field Full form-fade">
                     <label>Teacher subject</label>
                     <input id="TeacherSubject" type="text" name="subject_id" maxlength="255" placeholder="Type teachers subject">
                 </li>
                 <?php if ($_SESSION['elevation'] == 3) { ?>
-                <li class="FormField Full FormFade">
+                <li class="form-field Full form-fade">
                     <label for="elevation">Teacher elevation</label>
                     <div class="radio">
                         <input id="teacher" class="TeacherElevation" name="elevation" type="radio" value=0>
@@ -81,7 +81,7 @@
                     </div>
                 </li>
                 <?php } ?>
-                <li class="FormSubmit FormFade">
+                <li class="form-submit form-fade">
                     <button id="TeacherUpdate">Apply changes</button>
                 </li>
             </ul>

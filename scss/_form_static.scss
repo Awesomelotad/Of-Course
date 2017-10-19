@@ -24,7 +24,7 @@
         //decoration
         list-style: none;
     }
-    .FormField {
+    .form-field {
 	    width: calc(100% - 20px);
 	    background: $bg-dgrey-solid;
 	    border: 1px solid $bg-dgrey-border;
@@ -54,7 +54,6 @@
 			@include bp(nav) {
 				grid-column: 1;
 			};
-            display: inline-block;
         }
         &.Red {
             button {
@@ -90,6 +89,10 @@
             }
         }
     }
+	input {
+		//dimension
+		margin-top: .5rem;
+	}
     input, textarea, button {
         //layout
         display: block;
@@ -112,7 +115,7 @@
 	    	border: 1px solid darken($bg-wgpblue-solid, 3%);
 		}
     }
-    .FormSubmit {
+    .form-submit {
 		//layout
 		grid-column: 1 / span 2;
 		@include bp(nav) {
@@ -137,4 +140,7 @@
             }
         }
     }
+	.form-fade {
+		display: none;
+	}
 }

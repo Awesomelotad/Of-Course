@@ -5,15 +5,15 @@
 <div id="dates-modal" style="display: none;">
     <form id="DateForm" class="ModalForm" enctype="multipart/form-data">
         <ul>
-            <li class="FormField">
+            <li class="form-field">
                 <label for="NewDate">Date</label>
                 <input id="DateInput" type="date" name="NewDate" maxlength="10" placeholder="YYYY-MM-DD" autofocus>
             </li>
-            <li class="FormField">
+            <li class="form-field">
                 <label for="NewDescription">Description</label>
                 <textarea id="DescriptionInput" type="text" maxlength="254" placeholder="Enter a description" name="NewDescription" onfocus="adjust_textarea(this);" onkeyup="adjust_textarea(this);"></textarea>
             </li>
-            <li class="FormSubmit">
+            <li class="form-submit">
                 <button id="DateSubmit"></button>
             </li>
             <h4 id="SubmitError" style="text-align:center;display:none;margin-bottom:0;color:black;"></h4>
@@ -27,7 +27,7 @@
         <ul>
             <input type="text" id="MetaRow" value="" style="display:none;"/>
             <input type="text" id="MetaData" value="" style="display:none;"/>
-            <li class="FormSubmit">
+            <li class="form-submit">
                 <button id="ConfirmDateDelete">Yes, delete it</button>
             </li>
         </ul>

@@ -15,7 +15,7 @@
         //decoration
         list-style: none;
     }
-    .FormField {
+    .form-field {
         //layout
         display: block;
         //dimension
@@ -69,7 +69,7 @@
         font-size: $fontsize-m + .1rem;
         font-family: $fontstack-roboto;
     }
-    .FormSubmit {
+    .form-submit {
         input, button {
             //dimension
             padding: 10px;
@@ -88,7 +88,7 @@
                 color: darken(white, 5%);
             }
         }
-        & .Red {
+        &.Red {
             input, button {
                 background: $bg-red-solid;
                 border-bottom-color: darken($bg-red-solid, 8%);
@@ -99,7 +99,7 @@
         }
     }
 }
-.FormError {
+.form-error {
     //layout
     display: none;
     //dimension
@@ -113,6 +113,6 @@
     border-radius: 0 0 9px 9px;
     //font
     font-family: $fontstack-roboto;
-    font-size: 1.2em;
+    font-size: $fontsize-m;
     text-align: center;
 }

@@ -2,13 +2,13 @@
     <h1 class="Important">- Remove an account -</h1>
     <div class="Important">Be <i><b>VERY</b></i> careful what you touch here...</div>
     <div class="Content">
-        <form id="TeacherDeleteForm" class="StaticForm" enctype="multipart/form-data" autocomplete="off" onkeypress="return event.keyCode != 13;">
+        <form id="TeacherDeleteForm" class="StaticForm" enctype="multipart/form-data" method="post" autocomplete="off" onkeypress="return event.keyCode != 13;">
             <ul class="FormContainer">
-                <li class="FormField Split">
-                    <label for="teacher">Teacher to edit</label>
-                    <input type="text" id="TeacherIdentity" name="teacher" maxlength="255" placeholder="Type teachers code">
+                <li class="form-field Split">
+                    <label for="teacher">Teacher to remove</label>
+                    <input type="text" id="TeacherIdentity" name="teacher" maxlength="4" placeholder="Type teachers code">
                 </li>
-                <li class="FormField Red Split">
+                <li class="form-field Red Split">
                     <button id="TeacherRemove">Delete teacher</button>
                 </li>
             </ul>
@@ -16,4 +16,4 @@
     </div>
 </div>
 <script src="./js/accounts.js"></script>
-<script>GetTeacher('all');</script>
+<script type="text/javascript">GetTeacher('all');</script>
