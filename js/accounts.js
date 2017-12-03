@@ -59,6 +59,7 @@ function GetTeacher(identity) {
             } else if ($response.status == 'success' && identity != 'all') {
                 $('#TeacherIdentity').val($teachers.teacher_code);
                 $('#TeacherCode').val($teachers.teacher_code);
+				$teacher_list = $teachers.teacher_code;
                 LoadTeacher();
             } else if ($response.status == 'error') {
                 alert($response.data);
@@ -69,6 +70,7 @@ function GetTeacher(identity) {
 function AddTeacher(action, identity) {
     var $data = {
         code: $('#TeacherCode').val(),
+		identity: '',
         name: $('#TeacherName').val(),
         email: $('#TeacherEmail').val(),
         password: $('#TeacherPassword').val(),
@@ -83,9 +85,15 @@ function AddTeacher(action, identity) {
     }
     var $dataValid = 0;
     $.each($data, function(index, value) {
-        if (index != 'password' && value == '') {
-            $dataValid += 1;
-        }
+        if (action == 'add') {
+			if (index != 'identity' && value == '') {
+            	$dataValid += 1;
+			}
+        } else {
+			if (index != 'password' && index != 'password_confirm' && value == '') {
+				$dataValid += 1;
+			}
+		}
     });
     if ($dataValid >= 1) {
         alert('Error: Failed to update account. Reason: 1 or more requred fields empty.');
@@ -97,7 +105,7 @@ function AddTeacher(action, identity) {
         }
         $.ajax({
             type: "POST",
-            url: './scripts/add_account.php',
+            url: './scripts/accounts.php',
             dataType: 'json',
             data: $data,
             success: function (data) {
@@ -182,15 +190,12 @@ function LoadTeacher() {
         }
     });
 }
-function RemoveTeacher(sess_id, using_id, e) {
+function RemoveTeacher(sess_id, e) {
     e.preventDefault();
     var $data = {
         password: $('#ConfirmPassword').val(),
-        id: ''
+        id: $('#TeacherIdentity').val()
     };
-    if (using_id) {
-        $data.id = $('#TeacherIdentity').val()
-    }
     $.ajax({
         type: "POST",
         url: './scripts/remove_teacher.php',

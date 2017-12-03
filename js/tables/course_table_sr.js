@@ -2,7 +2,7 @@ var Yeartable = $('#YearTable').DataTable( {
     responsive: true,
     "data" : $year_table_data,
     "columns" : [
-        {"data" : "class_code"},
+        {"data" : "course_code"},
         {"data" : "course_name"},
         {"data" : "optional"},
         {"data" : "department_name"},

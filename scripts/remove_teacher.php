@@ -3,12 +3,7 @@ include('./config.php');
 session_start();
 
 $password = $_POST['password'];
-$t_id = $_POST['id'];
-if ($t_id == '') {
-    $t_id = $_SESSION['userid'];
-} else {
-    $t_id = mysqli_fetch_array(mysqli_query($dbconnect, "SELECT t_id FROM teachers WHERE teacher_code='".$_POST['id']."' LIMIT 1"))[0];
-}
+$t_id = mysqli_fetch_array(mysqli_query($dbconnect, "SELECT t_id FROM teachers WHERE teacher_code='".$_POST['id']."' LIMIT 1"))[0];
 $password_active = mysqli_fetch_array(mysqli_query($dbconnect, "SELECT password FROM teachers WHERE t_id='".$t_id."'"))[0];
 $return = (object) null;
 

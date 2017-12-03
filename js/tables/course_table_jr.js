@@ -2,10 +2,10 @@ $('#YearTable').DataTable( {
     responsive: true,
     "data" : $year_table_data,
     "columns" : [
-        { "data" : "class_code" },
+        { "data" : "course_code" },
         { "data" : "course_name" },
         { "data" : "optional" },
-        { "data" : "group_name" }
+        { "data" : "department_name" }
     ],
     createdRow: function ( row, data ) {
         if (data['optional'] == "1") {

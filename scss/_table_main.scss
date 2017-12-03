@@ -103,10 +103,11 @@ th.dt-center, td.dt-center {
     user-select: none;
     outline: none;
     //font
+	text-shadow: 1px 1px 1px #000;
     font-weight: bold;
     font-family: $fontstack-lato;
     font-size: $fontsize-s;
-    color: black!important;
+    color: white;
     & span {
         //font
         font-size: $fontsize-m;

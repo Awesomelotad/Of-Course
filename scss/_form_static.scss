@@ -1,6 +1,6 @@
 // main: complete.scss
 
-.StaticForm {
+.static-form {
     //dimension
     width: calc(100% - 32px);
     padding: 2em 1em 1em 1em;
@@ -89,13 +89,12 @@
             }
         }
     }
-	input {
+	input, select {
 		//dimension
 		margin-top: .5rem;
 	}
-    input, textarea, button {
+    input, textarea, button, select {
         //layout
-        display: block;
         box-sizing: border-box;
         //dimension
         resize: none;
@@ -140,7 +139,7 @@
             }
         }
     }
-	.form-fade {
-		display: none;
-	}
+}
+.form-fade {
+	display: none;
 }

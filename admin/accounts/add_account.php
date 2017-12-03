@@ -1,6 +1,6 @@
 <div id="department-modal" style="display: none;">
     <h2 id="department-modal-header" style="text-align:center;color:black;"></h2>
-    <form class="ModalForm">
+    <form class="modal-form">
         <ul>
             <li class="form-submit">
                 <button id="DepartmentSubmit">Add department</button>
@@ -13,7 +13,7 @@
     <h1 class="Important">- Add an account -</h1>
     <div class="Important">Complete control of account registration</div>
     <div class="Content">
-        <form id="TeacherForm" class="StaticForm" enctype="multipart/form-data" autocomplete="off" onkeypress="return event.keyCode != 13;">
+        <form id="TeacherForm" class="static-form" enctype="multipart/form-data" autocomplete="off" onkeypress="return event.keyCode != 13;">
             <ul class="FormContainer">
                 <li class="form-field Split">
                     <label for="teacher_code">Teacher code</label>
@@ -23,13 +23,18 @@
                     <label for="name">Teacher name</label>
                     <input id="TeacherName" type="text" name="name" maxlength="255" placeholder="Type teachers name">
                 </li>
-                <li class="form-field Split">
+                <li class="form-field Full">
                     <label for="email">Teacher email</label>
                     <input id="TeacherEmail" type="email" name="email" maxlength="255" placeholder="Type teachers email">
                 </li>
                 <li class="form-field Split">
                     <label for="password">Teacher password</label>
                     <input id="TeacherPassword" type="password" name="password" maxlength="255" placeholder="Type teachers password">
+                </li>
+                </li>
+                <li class="form-field Split">
+                    <label for="password_confirm">Confirm password</label>
+                    <input id="TeacherPConfirm" type="password" name="password_confirm" maxlength="255" placeholder="Confirm typed password">
                 </li>
                 <li class="form-field Split">
                     <label for="department_id">Teacher department</label>

@@ -14,7 +14,7 @@
                 </p><h2>From the green (optional) :</h2><p>
                 In addition to the compulsory courses, you must choose <b>FOUR</b> options ";
             if ($_REQUEST['year'] == 9) {
-                echo "from the green rows below (one from each; Arts, Language and Technology) and one";
+                echo "from the green rows below (one from each; Arts, Language, and Technology) and one";
             } echo " from any green row. The outlines below are provided for your information only.</p>";
         } elseif ($_REQUEST['year'] == 11) {
             echo "<p>You must choose <b>English</b>, <b>Mathematics</b> and <b>Science</b> when you select your options. The course that you are enrolled in will
@@ -41,9 +41,11 @@
                 if ($_REQUEST['year'] == 9 or $_REQUEST['year'] == 10) {
                     include('./easel/tables/junior.php');
                     $LoadPage = true;
+					$senior = False;
                 } elseif ($_REQUEST['year'] <= 13 and $_REQUEST['year'] > 10) {
                     include('./easel/tables/senior.php');
                     $LoadPage = true;
+					$senior = True;
                 } else {
                     echo "<h1 class=\"Important\" style=\"margin: auto 0;\">- Error 404: Page not found. -</h1>";
                     $LoadPage = false;
@@ -53,8 +55,8 @@
                     $return_arr = array();
                     mysqli_data_seek($result_query, 0);
                     while ($row = mysqli_fetch_assoc($result_query)) {
-                        if ($row['optional'] == 0) {
-                            $row['group_name'] = 'Compulsory';
+                        if ($row['optional'] == 0 && $senior == False) {
+                            $row['department_name'] = 'Compulsory';
                         }
                         $return_arr[] = $row;
                     }

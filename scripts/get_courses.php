@@ -5,17 +5,17 @@ $course_id = $_POST['course_id'];
 $return = (object) null;
 
 if ($course_id == 'all') {
-    $group_sql = "SELECT group_name FROM course GROUP BY group_name";
-	$group_query = mysqli_query($dbconnect, $group_sql);
+    $sql = "SELECT class_name FROM course GROUP BY class_name";
+	$query = mysqli_query($dbconnect, $sql);
 	$return_arr = array();
-	mysqli_data_seek($group_query, 0);
-	while ($row = mysqli_fetch_assoc($group_query)) {
-		$return_arr[] = $row['group_name'];
+	mysqli_data_seek($query, 0);
+	while ($row = mysqli_fetch_assoc($query)) {
+		$return_arr[] = $row['class_name'];
 	}
     $status = 'success';
     $data = json_encode($return_arr);
 } else {
-    $sql = "SELECT department_name FROM department WHERE department_id='$department_id'";
+    $sql = "SELECT class_name FROM course WHERE course_id='$course_id'";
     $query = mysqli_query($dbconnect, $sql);
     $return_arr = array(mysqli_fetch_assoc($query));
     if ($return_arr[0] != null) {

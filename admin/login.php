@@ -25,7 +25,7 @@
         });
     </script>
 
-    <form id="LoginForm" class="ModalForm" method="POST" enctype="multipart/form-data">
+    <form id="LoginForm" class="modal-form" method="POST" enctype="multipart/form-data">
         <ul>
             <li class="form-field">
                 <label for="email">Email</label>

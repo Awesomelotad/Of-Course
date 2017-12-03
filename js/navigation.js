@@ -18,7 +18,7 @@ $(document).ready(function() {
 		$('.nav-list a').removeClass('active');
 		$('.drop-arrow').removeClass('active');
     });
-	$('#nav-toggle').on('click', function() {
+	$('#nav-toggle').click(function() {
   		this.classList.toggle('active');
 	});
 	$('#nav-toggle').click(function() {
@@ -37,5 +37,8 @@ $(document).ready(function() {
 			  	$('nav ul.nav-list').removeClass('active');
 			}
 		}
+	});
+	$('#department-toggle').click(function() {
+		modal.open('#add-edit-department-modal');
 	});
 });

@@ -3,7 +3,7 @@
 <script src="./datatables/js/datatables.min.js"></script>
 <script src="./datatables/js/buttons.datatables.js"></script>
 <div id="dates-modal" style="display: none;">
-    <form id="DateForm" class="ModalForm" enctype="multipart/form-data">
+    <form id="DateForm" class="modal-form" enctype="multipart/form-data">
         <ul>
             <li class="form-field">
                 <label for="NewDate">Date</label>
@@ -23,7 +23,7 @@
 
 <div id="confirm-modal" style="display: none;">
     <h2 style="text-align:center;color:black;">Are you sure you want to delete this event?</h2>
-    <form class="ModalForm">
+    <form class="modal-form">
         <ul>
             <input type="text" id="MetaRow" value="" style="display:none;"/>
             <input type="text" id="MetaData" value="" style="display:none;"/>
